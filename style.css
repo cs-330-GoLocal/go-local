@@ -1,0 +1,52 @@
+body{
+    width: 100%;
+    border:none;
+    margin:0;
+    background-color:lightblue
+}
+
+nav {
+    position:fixed;
+    width: 100%;
+    height: 40px;
+    background-color:salmon;
+    color:white;
+}
+
+.main {
+    padding-top:40px;
+    display:flex;
+    width: 100%;
+    align-items:center;
+    flex-direction:column;
+}
+
+.category {
+    width: 90%;
+    height: 300px;
+    border-radius:20px;
+    background-color:white;
+    margin:20px;
+}
+
+.cat-content {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.page-follow {
+    position:fixed;
+    bottom:10px;
+    right:20px;
+    height:50px;
+    font-size:18pt;
+    color:white;
+    background-color:black;
+    border:none;
+    border-radius:25px;
+    padding: 10px 30px;
+
+}
+
+
