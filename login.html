@@ -1,19 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <head>
-                
-    </head>
-    <body>
-        <nav>
-            <a href="#">GoLocal</a>
-            <a>Search Bar</a>
-            <button>Favorites</button>
-            <a href="#">Profile</a>
-        </nav>
-        <div class = "main">
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/png" href="images/globe.png">
+    <link rel="stylesheet" href="css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoLocalLogin</title>
+</head>
+<body>
+    <nav>
+        <a href="#">GoLocal</a>
+        <a>Search Bar</a>
+        <button>Favorites</button>
+        <a href="#">Profile</a>
+    </nav>
+    <main class="login" method="GET">
+        <h1>GoLocal</h1>
+        <p>Connect with locals -- and other fascinating people. Get updates about restarants and events that interest you. </p>
+        <form action="results.html" method="GET">
             <div>
-                
+                <!-- <label>Name</label> -->
+                <input type="text" name="name" placeholder="Full name" required> 
             </div>
-        </div>
-    </body>
+            <div>
+                <!-- <label>Email</label> -->
+                <input type="text" name="email" placeholder="Email" required>
+            </div>
+            <div>
+                <label>Age</label>
+                <input type="number" name="age" id="age" min="1" max="100" step="1" placeholder="Age">
+            </div>
+            <div>
+                <label for="Male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female ">
+            </div>
+            <div>
+                <label for="date">Birthdate</label>
+                <input type="date" name="date" id="date" placeholder="Birthdate">
+            </div>
+            <div>
+                <!-- <label>Password</label> -->
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
 </html>
