@@ -11,6 +11,12 @@ nav {
     height: 40px;
     background-color:salmon;
     color:white;
+    display:flex;
+    flex-direction:row;
+}
+
+nav > button {
+    height:20px;
 }
 
 .main {
@@ -23,7 +29,7 @@ nav {
 
 .category {
     width: 90%;
-    height: 300px;
+    max-height: 400px;
     border-radius:20px;
     background-color:white;
     margin:20px;
@@ -46,7 +52,56 @@ nav {
     border:none;
     border-radius:25px;
     padding: 10px 30px;
+}
+
+.profile img {
+    border-radius:150px;
+    width:300px;
+    height:auto;
+    max-height:300px;
+}
+
+.category h1{
+    margin: 10px 0 0 30px;
+}
+
+
+.postcard {
+    background-color:grey;
+    max-width:400px;
+    max-height:320px;
+    border-radius: 30px;
+    margin: 20px;
+    overflow:hidden;
+}
+
+.postcard h2, .postcard h3, .postcard h4 {
+    text-align:center;
+    margin:0;
 
 }
 
+.postimg {
+    width:400px;
+    height:200px;
+    overflow:hidden;
+    display:flex;
+}
+
+.postimg.duo img {
+    width:auto;
+    height:200px;
+    max-width:200px;
+    margin-top: 0px
+}
+
+.postimg img {
+    width:400px;
+    height:auto;
+    margin-top: -75px
+}
+
+.hide {
+    display:none;
+}
 

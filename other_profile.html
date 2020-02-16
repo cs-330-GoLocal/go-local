@@ -2,48 +2,67 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kyle - GoLocal</title>
     </head>
     <body>
         <nav>
-            <a href="#"><img src="images/GoLocal-logo.jpeg" alt="GoLocal Logo"></a>
-            <a>Search Bar</a>
-            <button>Favorites</button>
-            <a href="#">Profile</a>
+            <a href="#">
+                <img src="images/GoLocal-logo.jpeg" alt="GoLocal Logo" class = "hide">
+            </a>
+            <div class = "search">
+                <form>
+                    <input type="text" placeholder="Search" name="search">
+                    <button type = "submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            </a>
+            <button><i class="fa fa-star"></i></button>
+            <a href="#"><i class = "fa fa-user"></i></a>
         </nav>
         <div class = "main">
             <div class = "category profile">
-                <img href = "#">
+                <div class = "profimg">
+                    <img src="images/Kyle-profile-pic.jpg" alt="Profile Picture">
+                </div>
                 <h1>Kyle</h1>
                 <h3>23</h3>
                 <h3>Del Mar, California</h3>
-                <img src="images/Kyle-profile-pic.jpg" alt="Profile Picture">
             </div>
             <div class = "category" id = "rest">
                 <h1>Restaurants</h1>
                 <div class = "cat-content">
                     <div class = "postcard restaurant">
+                        <div class = "postimg">
+                            <img src="images/Board-and-Brew.jpg" alt="Board and Brew Picture">
+                            <img src="images/Board-and-Brew-Food.jpg" alt="Board and Brew Food Picture" class = "hide">
+                        </div>  
                         <h2>Board and Brew</h2>
-                        <h3>1212 Camino Del Mar #2506, Del Mar, CA 92014</h3>
                         <h3>Lunch</h3>
                         <h3>Sandwiches</h3>
-                        <img src="images/Board-and-Brew.jpg" alt="Board and Brew Picture">
-                        <img src="images/Board-and-Brew-Food.jpg" alt="Board and Brew Food Picture">
+                        <h4>1212 Camino Del Mar #2506, Del Mar, CA 92014</h4>
                     </div>
                     <div class = "postcard restaurant">
+                        <div class = "postimg">
+                            <img src="images/Brigantine.jpg" alt="Brigantine Picture">
+                            <img src="images/Brig-Food.jpg" alt="Brigantine Food Picture" class = "hide">
+                        </div>
                         <h2>The Brigantine</h2>
-                        <h3>3263 Camino Del Mar, Del Mar, CA 92014</h3>
                         <h3>Lunch and Dinner</h3>
                         <h3>Seafood</h3>
-                        <img src="images/Brigantine.jpg" alt="Brigantine Picture">
-                        <img src="images/Brig-Food.jpg" alt="Brigantine Food Picture">
+                        <h4>3263 Camino Del Mar, Del Mar, CA 92014</h4>
                     </div>
                     <div class = "postcard restaurant">
+                        <div class = "postimg">
+                            <img src="images/Americana.jpg" alt="Americana Picture">
+                            <img src="images/Americana-Food.jpeg" alt="Americana Food Picture" class = "hide">
+                        </div>
                         <h2>Americana</h2>
-                        <h3>1454 Camino Del Mar, Del Mar, CA 92014</h3>
                         <h3>Breakfast, Lunch, and Dinner</h3>
                         <h3>American cuisine</h3>
-                        <img src="images/Americana.jpg" alt="Americana Picture">
-                        <img src="images/Americana-Food.jpeg" alt="Americana Food Picture">
+                        <h4>1454 Camino Del Mar, Del Mar, CA 92014</h4>
                     </div>
             </div>
             </div>
@@ -51,14 +70,18 @@
                 <h1>Camping</h1>
                 <div class = "cat-content">
                     <div class = "postcard camp">
+                        <div class = "postimg">
+                            <img src="images/San-Elijo-campground.jpeg" alt="San Elijo Campground Picture">
+                        </div>
                         <h2>San Elijo State Beach</h2>
-                        <h3>2050 S Coast Hwy 101, Cardiff, CA 92007</h3>
-                        <img src="images/San-Elijo-campground.jpeg" alt="San Elijo Campground Picture">
+                        <h4>2050 S Coast Hwy 101, Cardiff, CA 92007</h4>
                     </div>
                     <div class = "postcard camp">
+                        <div class = "postimg">
+                            <img src="images/Carlsbad-campground.jpg" alt="Carlsbad Campground Picture">
+                        </div>
                         <h2>Carlsbad State Beach</h2>
-                        <h3>7201 Carlsbad Blvd, Carlsbad, CA 92008</h3>
-                        <img src="images/Carlsbad-campground.jpg" alt="Carlsbad Campground Picture">
+                        <h4>7201 Carlsbad Blvd, Carlsbad, CA 92008</h4>
                     </div>
                 </div>
             </div>
