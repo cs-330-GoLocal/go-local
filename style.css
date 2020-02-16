@@ -54,6 +54,11 @@ nav > button {
     padding: 10px 30px;
 }
 
+.profile {
+    width: 100%;
+    background-image:"images/Kyle"
+}
+
 .profile img {
     border-radius:150px;
     width:300px;
@@ -104,4 +109,6 @@ nav > button {
 .hide {
     display:none;
 }
+
+
 
