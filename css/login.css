@@ -2,9 +2,167 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: white;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav input[type=text]{
+    background-color: white;
+    background-image: url(../images/search.png);
+    background-size: contain;
+    background-position: 0px 3px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+.homepage{
+    align-self: flex-start;
+}
+a img{
+    width: 50px;
+    height: auto;
+}
+
+a h1{
+    display: inline-block;
+}
+nav{
+    position: fixed;
+    z-index: 1;
+}
+
+nav a{
+    font-size: 200px;
+    align-self: flex-start;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: large;
+    color: white;
 }
 
 main{
+    display: flex;
+    position: relative;
     width: 100%;
     height: 100vh;
+    background-image: url(../images/login.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+.intro{
+    font-family: 'Sriracha', cursive;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    max-width: 40%;
+    word-wrap: normal;
+}
+.intro h1{
+    font-size: 3.5rem;
+}
+
+.intro p{
+    font-size: 1.5rem;
+}
+
+.login-info{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 300px;
+}
+form h1{
+    font-weight: lighter;
+    padding: 10px 50px 0px 10px;
+    color: black;
+    font-size: 20px;
+}
+span{
+    color: gray;
+    opacity: 0.5;
+}
+input[type=text], input[type=password], input[type=number], input[type=date]{
+    padding: 12px 20px;
+    /* border-radius: 4px; */
+}
+
+.date{
+    color: black;
+    text-transform: uppercase;
+}
+.login-info form div{
+    margin: 0 auto;
+    display: inline;
+    padding: 10px;
+}
+/* 
+.submit{
+    display: inline-block;
+    padding: 0.3 em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: white;
+    background-color: #4eb5f1;
+    text-align: center;
+}
+
+.submit:hover{
+    background-color: #4095c6;
+} */
+.submit{
+    align-self: flex-end;
+    width: 100px;
+    height: 30px;
+    transform: translate(-10px, -5px);
+    background: rgb(3, 121, 212); 
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+    transition: .5s;
+    }
+
+.submit:hover{
+    background: #B9DFFF;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+    }
+    
+
+/* input[type=text], select, input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  } */
