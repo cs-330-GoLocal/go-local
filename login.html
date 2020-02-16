@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" type="image/png" href="images/globe.png">
+    <link rel="shortcut icon" type="image/png" href="images/GoLocal-logo.jpeg">
     <link rel="stylesheet" href="css/login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,48 @@
 </head>
 <body>
     <nav>
-        <a href="#">GoLocal</a>
-        <a>Search Bar</a>
+        <a class="homepage" href="#"><img src="images/GoLocal-logo.jpeg" alt="Logo"><h1>GoLocal</h1></a>
+        <!-- <a href="#">Search Bar</a> -->
+        <input type="text" name="search" placeholder="Search..">
         <button>Favorites</button>
         <a href="#">Profile</a>
     </nav>
-    <main class="login" method="GET">
-        <h1>GoLocal</h1>
-        <p>Connect with locals -- and other fascinating people. Get updates about restaurants and events that interest you. </p>
-        <form action="results.html" method="GET">
+    <main method="GET">
+        <div class="intro">
+            <h1>Welcome to GoLocal.</h1>
+            <br>
+            <p>Connect with locals -- and other fascinating people. Get updates about restarants and events that interest you. Be a part of your local community and spread information to fellow travelers!</p>
+        </div>
+        <div class="login-info">
+          <form action="results.html" method="GET">
+            <h1>New to GoLocal?    <span>Sign Up</span></h1>
             <div>
                 <!-- <label>Name</label> -->
-                <input type="text" name="name" placeholder="Full name" required> 
+                <input class="inputs" type="text" name="name" placeholder="Name" required> 
             </div>
             <div>
                 <!-- <label>Email</label> -->
-                <input type="text" name="email" placeholder="Email" required>
+                <input class="inputs" type="text" name="email" placeholder="Email" required>
             </div>
             <div>
+                <!-- <label>Password</label> -->
+                <input class="inputs" type="password" name="password" placeholder="Password" required>
+            </div>
+            <div>
+                <input class="inputs" type="number" name="zip" id="zip" placeholder="ZIP Code">
+            </div>
+            <div>
+                <input class="inputs date" type="date" name="date" id="date" placeholder="Birthdate">
+            </div>
+            <!-- <button type="reset">Reset</button> -->
+            <button class="submit" type="submit">Sign Up</button>
+        </form>  
+        </div>    
+    </main>
+</body>
+</html>
+
+<!-- <div>
                 <label>Age</label>
                 <input type="number" name="age" id="age" min="1" max="100" step="1" placeholder="Age">
             </div>
@@ -39,14 +63,4 @@
             <div>
                 <label for="date">Birthdate</label>
                 <input type="date" name="date" id="date" placeholder="Birthdate">
-            </div>
-            <div>
-                <!-- <label>Password</label> -->
-                <input type="password" name="password" placeholder="Password" required>
-            </div>
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
-        </form>
-    </main>
-</body>
-</html>
+            </div> -->
