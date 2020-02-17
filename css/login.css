@@ -77,7 +77,7 @@ main{
 
 .login-info{
     position: absolute;
-    right: 10%;
+    right: 15%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -103,6 +103,7 @@ span{
 }
 input[type=text], input[type=password], input[type=number], input[type=date]{
     padding: 12px 20px;
+    color: black;
     /* border-radius: 4px; */
 }
 
@@ -156,7 +157,9 @@ input[type=text], input[type=password], input[type=number], input[type=date]{
     text-shadow:none;
     }
     
-
+.login-form{
+    margin-bottom: 10px;
+}
 /* input[type=text], select, input[type=password]{
     width: 100%;
     padding: 12px 20px;
