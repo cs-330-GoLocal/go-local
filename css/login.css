@@ -4,8 +4,16 @@
     box-sizing: border-box;
     color: white;
 }
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Assistant&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lemonada&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+
+label{
+    color: black;
+    font-family: sans-serif;
+}
+
 nav{
     width: 100%;
     height: 100px;
@@ -53,7 +61,7 @@ main{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url(../images/login.jpg);
+    background-image: url(../images/login2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -61,18 +69,22 @@ main{
 
 .intro{
     font-family: 'Sriracha', cursive;
+    /* font-family: 'Lemonada', cursive;
+    font-family: 'Assistant', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Kaushan Script', cursive; */
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 20%;
     max-width: 40%;
     word-wrap: normal;
 }
 .intro h1{
-    font-size: 3.5rem;
+    font-size: 3.8rem;
 }
 
 .intro p{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .login-info{
@@ -105,6 +117,11 @@ input[type=text], input[type=password], input[type=number], input[type=date]{
     padding: 12px 20px;
     color: black;
     /* border-radius: 4px; */
+}
+
+input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .date{
