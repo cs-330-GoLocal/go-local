@@ -54,16 +54,42 @@ nav > button {
     padding: 10px 30px;
 }
 
-.profile {
+.profile{
     width: 100%;
-    background-image:"images/Kyle"
+    background-repeat:no-repeat;
+    background-size:100%;
+    background-color:green;
+    color:black;
+    height:400px;
+    margin-bottom:70px;
+}
+
+#kiara {
+    background-image:url("images/Kiara-profile-background.jpeg");
+    background-position-y:-400px
+}
+
+#kyle {
+    background-image:url("images/Kyle-profile-background.jpg");
 }
 
 .profile img {
     border-radius:150px;
+    border:solid white 5px;
     width:300px;
     height:auto;
     max-height:300px;
+    position:absolute;
+    top:200px;
+    left:40px;
+}
+
+.profile h1{
+    position:absolute;
+    top:420px;
+    left:340px;
+    font-size: 40px;
+
 }
 
 .category h1{
