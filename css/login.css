@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
 
 label{
+    margin: 0 auto;
     color: black;
     font-family: sans-serif;
 }
@@ -119,9 +120,21 @@ input[type=text], input[type=password], input[type=number], input[type=date]{
     /* border-radius: 4px; */
 }
 
-input[type="date"]::-webkit-inner-spin-button { 
+input[type="date"]::-webkit-inner-spin-button, input[type="number"]::-webkit-inner-spin-button{ 
     display: none;
     font-family: 'Times New Roman', Times, serif;
+}
+#Month, #Day{
+    width: 50px;
+}
+
+#Year{
+    width: 75px;
+}
+
+.dates{
+    display: flex;
+    flex-direction: column;
 }
 
 .date{
@@ -130,9 +143,16 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 .login-info form div{
     margin: 0 auto;
-    display: inline;
+    display: flex;
     padding: 10px;
 }
+
+#birthday{
+    align-self: flex-start;
+    transform: translate(-75px, 5px);
+}
+
+/* textbox for category title some text */
 /* 
 .submit{
     display: inline-block;
