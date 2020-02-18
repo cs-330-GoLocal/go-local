@@ -63,22 +63,42 @@
                 <input class="inputs date" type="date" name="date" id="date" placeholder="Birthdate"> -->
                 <div class="dates">
                     <label>Month</label>
-                    <input type="number" name="Month" id="Month"> 
+                    <input type="text" min="1" max="12" maxlength="2" name="Month" id="Month" pattern="\d{2}" required/> 
                 </div class="dates">
                 <div class="dates">
                     <label>Day</label>
-                    <input type="number" name="Month" id="Day"> 
+                    <input type="text" min="1" max="31" maxlength="2" name="Month" id="Day" pattern="\d{2}" required/> 
                 </div>
                 <div class="dates" >
                     <label>Year</label>
-                    <input type="number" name="Year" id="Year"> 
+                    <input type="text" name="year" maxlength="4" pattern="\d{4}" id="Year" required/> 
                 </div>
                 
             </div>
             <!-- <button type="reset">Reset</button> -->
             <button class="submit" type="submit">Sign Up</button>
         </form>  
-        </div>    
+        </div>  
+        
+        
+        <!-- <div id="messageform">
+            <form action="" id="sendmessage">
+                <h1>
+                    Connect with your Locals Through Messaging!
+                </h1>
+                <br>
+                <div>
+                    <input class="inputs" type="text" name="to" id="to" placeholder="Recipient" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Recipient'">
+                </div>
+                <div>
+                    <textarea name="message" id="messagebox" cols="30" rows="10" placeholder="Write a Message" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Write a Message'"></textarea> 
+                </div>
+                <button class="submit" type="submit">Send</button>
+            </form> 
+        </div> -->
+        
     </main>
 </body>
 </html>

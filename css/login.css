@@ -114,18 +114,24 @@ span{
     color: gray;
     opacity: 0.5;
 }
-input[type=text], input[type=password], input[type=number], input[type=date]{
+input[type=text], input[type=password], input[type=date]{
     padding: 12px 20px;
     color: black;
     /* border-radius: 4px; */
 }
 
+input[type=number]{
+    padding: 12px;
+    color: black;
+}
 input[type="date"]::-webkit-inner-spin-button, input[type="number"]::-webkit-inner-spin-button{ 
     display: none;
     font-family: 'Times New Roman', Times, serif;
 }
 #Month, #Day{
     width: 50px;
+    padding: 12px 12px;
+    padding-left: 16px;
 }
 
 #Year{
@@ -206,3 +212,44 @@ input[type="date"]::-webkit-inner-spin-button, input[type="number"]::-webkit-inn
     border-radius: 4px;
     box-sizing: border-box;
   } */
+
+textarea{
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: sans-serif;
+    color: black;
+    resize: none;
+}
+
+#sendmessage{
+    max-width: 800px;
+    width: 500px;
+    height: 300px;
+    justify-content: center;
+    align-self: center;
+}
+#messageform{
+    position: absolute;
+    display: inline-block;
+}
+
+#sendmessage div input, #sendmessage div textarea{
+    width: 80%;
+}
+
+#sendmessage div{
+    box-sizing: border-box;
+    padding-left: 66px;
+}
+
+#sendmessage button{
+    align-self: center;
+    width: 9em;
+    transform: translate(0, 0);
+    bottom: 0;
+}
+
+#sendmessage h1{
+    text-align: center;
+}
