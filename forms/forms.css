@@ -1,28 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-body{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url(login-image.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
 
 .form-container{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: calc(50px+ 50%);
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
@@ -30,9 +12,6 @@ body{
     max-height: 500px;
 }
 
-body div{
-    display: inline-block;
-}
 form{
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -104,7 +83,6 @@ label{
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-family: 'Sriracha', cursive;
-
   }
   ::-moz-placeholder { /* Firefox 19+ */
     font-family: 'Roboto', sans-serif;
