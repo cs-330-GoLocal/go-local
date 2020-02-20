@@ -134,7 +134,8 @@ iframe {
 }
 
 #kyle {
-    background-image:url("images/Kyle-profile-background.jpg");
+    background-image:url("images/Kyle-profile-background2.jpg");
+    transform: rotate(90);
 }
 
 .profile img {

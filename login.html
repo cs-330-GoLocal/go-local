@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" type="image/png" href="images/GoLocal-logo.jpeg">
+    <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/GoLocal-icon.png">
     <link rel="stylesheet" href="css/login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GoLocal Login</title>
+    <title>Login</title>
 </head>
 <body>
     <!-- <nav>
@@ -15,15 +17,14 @@
         <button>Favorites</button>
         <a href="#">Profile</a>
     </nav> -->
-    <main method="GET">
+    <main>
         <div class="intro">
             <h1>Welcome to GoLocal.</h1>
-            <br>
-            <p>Connect with locals -- and other fascinating people. Get updates about restaurants and events in areas that interest you. Be a part of your local community and spread information to fellow travelers!</p>
+            <p>Connect with locals -- Get information about areas that interest you, exclusively from locals of that area. Be a part of your local community and spread information to fellow travelers!</p>
         </div>
         <div class="login-info">
         <div class="sign-in">
-            <form action="results.html" class="login-form">
+            <form action="my_profile.html" class="login-form">
                 <h1>
                     Sign In 
                 </h1>
@@ -39,7 +40,7 @@
             </form>
         </div>
         
-          <form action="results.html" method="GET">
+          <form action="my_profile.html" method="GET">
             <h1>New to GoLocal?    <span>Sign Up</span></h1>
             <div>
                 <!-- <label>Name</label> -->
@@ -56,13 +57,48 @@
             <div>
                 <input class="inputs" type="text" name="zip" id="zip" placeholder="ZIP Code">
             </div>
+            <label id="birthday">Birthdate</label>
             <div>
-                <input class="inputs date" type="date" name="date" id="date" placeholder="Birthdate">
+                <!-- <label>DOB</label>
+                <input class="inputs date" type="date" name="date" id="date" placeholder="Birthdate"> -->
+                <div class="dates">
+                    <label>Month</label>
+                    <input type="text" min="1" max="12" maxlength="2" name="Month" id="Month" pattern="\d{2}" required/> 
+                </div class="dates">
+                <div class="dates">
+                    <label>Day</label>
+                    <input type="text" min="1" max="31" maxlength="2" name="Month" id="Day" pattern="\d{2}" required/> 
+                </div>
+                <div class="dates" >
+                    <label>Year</label>
+                    <input type="text" name="year" maxlength="4" pattern="\d{4}" id="Year" required/> 
+                </div>
+                
             </div>
             <!-- <button type="reset">Reset</button> -->
             <button class="submit" type="submit">Sign Up</button>
         </form>  
-        </div>    
+        </div>  
+        
+        
+        <!-- <div id="messageform">
+            <form action="" id="sendmessage">
+                <h1>
+                    Connect with your Locals Through Messaging!
+                </h1>
+                <br>
+                <div>
+                    <input class="inputs" type="text" name="to" id="to" placeholder="Recipient" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Recipient'">
+                </div>
+                <div>
+                    <textarea name="message" id="messagebox" cols="30" rows="10" placeholder="Write a Message" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Write a Message'"></textarea> 
+                </div>
+                <button class="submit" type="submit">Send</button>
+            </form> 
+        </div> -->
+        
     </main>
 </body>
 </html>

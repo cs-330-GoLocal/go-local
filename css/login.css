@@ -4,8 +4,17 @@
     box-sizing: border-box;
     color: white;
 }
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Assistant&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lemonada&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+
+label{
+    margin: 0 auto;
+    color: black;
+    font-family: sans-serif;
+}
+
 nav{
     width: 100%;
     height: 100px;
@@ -53,7 +62,7 @@ main{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url(../images/login.jpg);
+    background-image: url(../images/login2.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -61,18 +70,22 @@ main{
 
 .intro{
     font-family: 'Sriracha', cursive;
+    /* font-family: 'Lemonada', cursive;
+    font-family: 'Assistant', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Kaushan Script', cursive; */
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 20%;
     max-width: 40%;
     word-wrap: normal;
 }
 .intro h1{
-    font-size: 3.5rem;
+    font-size: 3.8rem;
 }
 
 .intro p{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .login-info{
@@ -101,10 +114,33 @@ span{
     color: gray;
     opacity: 0.5;
 }
-input[type=text], input[type=password], input[type=number], input[type=date]{
+input[type=text], input[type=password], input[type=date]{
     padding: 12px 20px;
     color: black;
     /* border-radius: 4px; */
+}
+
+input[type=number]{
+    padding: 12px;
+    color: black;
+}
+input[type="date"]::-webkit-inner-spin-button, input[type="number"]::-webkit-inner-spin-button{ 
+    display: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+#Month, #Day{
+    width: 50px;
+    padding: 12px 12px;
+    padding-left: 16px;
+}
+
+#Year{
+    width: 75px;
+}
+
+.dates{
+    display: flex;
+    flex-direction: column;
 }
 
 .date{
@@ -113,9 +149,16 @@ input[type=text], input[type=password], input[type=number], input[type=date]{
 }
 .login-info form div{
     margin: 0 auto;
-    display: inline;
+    display: flex;
     padding: 10px;
 }
+
+#birthday{
+    align-self: flex-start;
+    transform: translate(-75px, 5px);
+}
+
+/* textbox for category title some text */
 /* 
 .submit{
     display: inline-block;
@@ -169,3 +212,44 @@ input[type=text], input[type=password], input[type=number], input[type=date]{
     border-radius: 4px;
     box-sizing: border-box;
   } */
+
+textarea{
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: sans-serif;
+    color: black;
+    resize: none;
+}
+
+#sendmessage{
+    max-width: 800px;
+    width: 500px;
+    height: 300px;
+    justify-content: center;
+    align-self: center;
+}
+#messageform{
+    position: absolute;
+    display: inline-block;
+}
+
+#sendmessage div input, #sendmessage div textarea{
+    width: 80%;
+}
+
+#sendmessage div{
+    box-sizing: border-box;
+    padding-left: 66px;
+}
+
+#sendmessage button{
+    align-self: center;
+    width: 9em;
+    transform: translate(0, 0);
+    bottom: 0;
+}
+
+#sendmessage h1{
+    text-align: center;
+}
