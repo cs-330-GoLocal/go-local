@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translate(0%, -50%);
+    background: white;
+    border-radius: 8px;
+    max-height: 500px;
+}
+
+.formi{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+}
+
+.formi div{
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+
+.formi textarea[name=message], .formi input[type=text]{
+    border-left-style: none;
+    border-top-style: none;
+    border-right-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+.formi textarea[name=message]{
+    padding: 12px 20px;
+    width: 90%;
+    resize: vertical;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.formi input[type=text]{
+    width: 90%;
+    padding: 12px 20px;
+}
+
+.form-container button{
+    transform: translateY(-5px);
+    align-self: center;
+    width: 100px;
+    height: 30px;
+    background: rgb(3, 121, 212);
+    color: #fff;
+    border: 1px solid rgb(3, 121, 212);
+    border-radius: 20px;
+    /* box-shadow: 5px 5px 5px #eee; */
+    text-shadow: none;
+    font-family: 'Sriracha', cursive;
+}
+
+.form-container button:hover{
+    background: #B9DFFF;
+    color: #fff;
+    border: 1px solid #B9DFFF;
+    border-radius: 20px;
+    /* box-shadow: 5px 5px 5px #eee; */
+    text-shadow:none;
+    transition: .4s ease-in;
+}
+
+.form-container h1{
+    text-align: center;
+    font-family: 'Sriracha', cursive;
+
+}
+
+.form-container label{
+    color: gray;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Sriracha', cursive;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Sriracha', cursive;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'Roboto', sans-serif;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-family: 'Roboto', sans-serif;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-family: 'Roboto', sans-serif;
+  }
