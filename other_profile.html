@@ -88,6 +88,40 @@
             </div>
         </div>
         <button class = "page-follow">Send a Question</button>
+        <div class="form-container">
+            <h1>Create Post</h1>
+            <br>
+            <form action="">
+                <div>
+                   <input type="text" name="" id="" placeholder="Title"> 
+                </div>
+                <br>
+                <div>
+                   <textarea id="amessage" name="message" cols="65" rows="10" placeholder="What's on your mind?" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Whats on your mind?'"></textarea>  
+                </div>
+            </form>
+            <button type="submit">Post</button>
+        </div>
+        <div class="form-container">
+           <form action="" id="messageform" class="formi">
+               <br>
+            <h1>
+                Connect with Locals
+            </h1>
+            <br>
+            <div>
+                <input type="text" placeholder="Recipient" onfocus="this.placeholder = ''"
+            onblur="this.placeholder = 'Recipient'">
+            </div>
+            <div>
+                <label for="">Message</label>
+                <textarea id="amessage" name="message" cols="65" rows="10" placeholder="Write a Message" onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Write a Message'"></textarea> 
+            </div>
+            </form>  
+            <button type="submit" id="sendbutton">Send</button>
+        </div>
         <script type="text/javascript" src="js/scripts.js"></script>
     </body>
 </html>
