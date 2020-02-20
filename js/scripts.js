@@ -1,7 +1,8 @@
 const msgForm = (ev) => {
-    console.log("SEND MESSAGE BUTTON PRESSED");
-    let msgBox = getElementByID("");
-    msgBox.style.display = "none";
+    let msgBox = document.getElementById("messageform");
+    console.log(msgBox);
+    console.log("got msgBox");
+    msgBox.style.display = "block";
 }
 
 let msgBtn = document.querySelector(".page-follow")

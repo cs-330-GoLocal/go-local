@@ -115,3 +115,7 @@ label{
   :-moz-placeholder { /* Firefox 18- */
     font-family: 'Roboto', sans-serif;
   }
+
+#messageform, #sendbutton {
+    display: none;
+}
