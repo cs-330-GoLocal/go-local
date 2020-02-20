@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
 body{
     width: 100%;
     border:none;
@@ -12,12 +14,72 @@ nav {
     background-color:darkslateblue;
     color:white;
     display:flex;
+    flex:1 auto auto 2 2;
     flex-direction:row;
     z-index:2;
+    vertical-align:center;
+    align-items:stretch;
 }
 
-nav > button {
-    height:20px;
+.logotext {
+    text-decoration:none;
+    color:white;
+    font-family:'Fjalla One', sans-serif;
+    font-size:30px;
+    line-height:40px;
+    flex: 1 1 auto;
+}
+
+.search {
+    flex: 1 1 auto;
+}
+
+.search input, .search button{
+    margin:0;
+    border:none;
+    padding:5px;
+}
+.search input{
+    background-color:transparent;
+    color:white;
+    border-radius:10px;
+    border: 3px solid white;
+}
+.search button {
+    background-color:transparent;
+    color:white;
+}
+
+.search button:hover {
+    background-color:#FFFFFF22;
+}
+
+nav img, iframe {
+    max-height:35px;
+    width:35px;
+    height:35px;
+    fill:white;
+    padding-left:10px
+}
+
+iframe {
+    fill:white;
+}
+
+.prfbtn {
+    max-height:35px;
+    min-width:35px;
+    border:3px solid white;
+    text-align:center;
+    line-height:35px;
+    color:white;
+    border-radius:50%;
+    background-color:transparent;
+    float:right;
+}
+
+.prfbtn:hover {
+    background-color:#FFFFFF22;
 }
 
 .main {
@@ -39,7 +101,8 @@ nav > button {
 .cat-content {
     display:flex;
     flex-direction:row;
-    align-items:center;
+    align-items:stretch;
+    overflow:auto;
 }
 
 .page-follow {
@@ -123,15 +186,19 @@ nav > button {
     margin: 10px 0 0 30px;
 }
 
-
 .postcard {
     background-color:darkslateblue;
     max-width:400px;
     max-height:320px;
+    min-width:400px;
     border-radius: 30px;
     margin: 20px;
     overflow:hidden;
     color:white;
+}
+
+.postcard:hover{
+    box-shadow:5px 10px #000000AA;
 }
 
 .postcard h2, .postcard h3, .postcard h4 {
