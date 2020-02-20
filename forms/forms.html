@@ -9,17 +9,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="form-container">
+    <div class="form-container hide" id="form">
         <h1>Create Post</h1>
         <br>
         <form action="">
             <div>
+                <input type="text" name="" id="" placeholder="Category"> 
+            </div>
+            <div>
                <input type="text" name="" id="" placeholder="Title"> 
+            </div>
+            <div>
+                <input type="text" name="" id="" placeholder="Photo URL"> 
             </div>
             <br>
             <div>
                <textarea id="amessage" name="message" cols="65" rows="10" placeholder="What's on your mind?" onfocus="this.placeholder = ''"
-            onblur="this.placeholder = 'Whats on your mind?'"></textarea>  
+                onblur="this.placeholder = 'Whats on your mind?'"></textarea>  
             </div>
         </form>
         <button type="submit">Post</button>
