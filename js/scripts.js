@@ -1,7 +1,5 @@
 const msgForm = (ev) => {
     let msgBox = document.getElementById("messageform");
-    console.log(msgBox);
-    console.log("got msgBox");
     msgBox.style.display = "block";
 }
 
