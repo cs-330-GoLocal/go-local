@@ -100,7 +100,7 @@
         <div class="form-container hide" id="form">
             <h1>Create Post</h1>
             <br>
-            <form action="" class="formi">
+            <form action="" class="formi" id="formp">
                 <div>
                     <input type="text" name="" id="" placeholder="Category"> 
                 </div>
@@ -116,7 +116,7 @@
                     onblur="this.placeholder = 'Whats on your mind?'"></textarea>  
                 </div>
             </form>
-            <button type="submit">Post</button>
+            <button type="submit" onclick=submitForm()>Post</button>
         </div>
     </body>
     <script>
@@ -126,7 +126,7 @@
         }
         
         function submitForm() {
-            var data = document.getElementById("form");
+            var data = document.getElementById("formp");
             var category = data.elements[0].value;
             var location = data.elements[1].value;
             var photourl = data.elements[2].value;
@@ -175,7 +175,7 @@
                 document.querySelector("#" + category + "> .cat-content").innerHTML += template;
             }
 
-            data.classList.add("hide")
+            document.getElementById("form").classList.add("hide")
         }
     </script>
 </html>
