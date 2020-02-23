@@ -138,6 +138,13 @@ iframe {
     transform: rotate(90);
 }
 
+#del-mar {
+    background-image:url("images/del-mar-background.jpg");
+    background-position-y:-250px;
+    height:300px;
+    margin-bottom:20px;
+}
+
 .profile img {
     border-radius:150px;
     border:solid white 5px;
@@ -171,6 +178,19 @@ iframe {
     padding:5px 30px 5px 100px;
     border-radius:15px;
     z-index:0;
+    color:white
+}
+
+.info.loc{
+    padding:5px 30px 5px 30px;
+    max-width:400px;
+    min-width:300px;
+    top:200px;
+    left:50px;
+}
+
+.info.loc h1{
+    font-size:50pt;
 }
 
 .info h1{
