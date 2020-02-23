@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/c70054eb0e.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="css/forms.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,7 +30,7 @@
                 <!-- <div class = "profimg">
                     <img src="images/Kyle-profile-pic.jpg" alt="Profile Picture">
                 </div> -->
-                <img src = "del-mar-background.jpg" alt="Area Background Image"> 
+                <img src = "images/del-mar-background.jpg" alt="Area Background Image"> 
                 <div class = "info">
                     <h1>Del Mar, CA</h1>
                 </div>
@@ -68,7 +70,9 @@
                         <h3>Sandwiches</h3>
                         <h4>1212 Camino Del Mar #2506, Del Mar, CA 92014</h4>
                         <button>Like</button>
+                        <span></span>
                         <button>Dislike</button>
+                        <span></span>
                         <h5>1000 Likes</h5>
                         <h5>0 Dislikes</h5>
                     </div>
@@ -175,32 +179,31 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class ="category" id = "beach">
-            <h1>Recommended Beaches</h1>
-            <div class = "cat-content">
-                <div class = "postcard beach">
-                    <div class = "postimg">
-                        <img src="images/San-Elijo-campground.jpeg" alt="San Elijo Campground Picture">
+            <div class ="category" id = "beach">
+                <h1>Recommended Beaches</h1>
+                <div class = "cat-content">
+                    <div class = "postcard beach">
+                        <div class = "postimg">
+                            <img src="images/San-Elijo-campground.jpeg" alt="San Elijo Campground Picture">
+                        </div>
+                        <h2>Powerhouse Park & Beach</h2>
+                        <h4>1658 Coast Blvd, Del Mar, CA 92014</h4>
+                        <button>Like</button>
+                        <button>Dislike</button>
+                        <h5>56 Likes</h5>
+                        <h5>31 Dislikes</h5>
                     </div>
-                    <h2>Powerhouse Park & Beach</h2>
-                    <h4>1658 Coast Blvd, Del Mar, CA 92014</h4>
-                    <button>Like</button>
-                    <button>Dislike</button>
-                    <h5>56 Likes</h5>
-                    <h5>31 Dislikes</h5>
-                </div>
-                <div class = "postcard camp">
-                    <div class = "postimg">
-                        <img src="images/Carlsbad-campground.jpg" alt="Carlsbad Campground Picture">
+                    <div class = "postcard camp">
+                        <div class = "postimg">
+                            <img src="images/Carlsbad-campground.jpg" alt="Carlsbad Campground Picture">
+                        </div>
+                        <h2>Dog Beach</h2>
+                        <h4>3200 Camino Del Mar, Del Mar, CA 92014</h4>
+                        <button>Like</button>
+                        <button>Dislike</button>
+                        <h5>72 Likes</h5>
+                        <h5>4 Dislikes</h5>
                     </div>
-                    <h2>Dog Beach</h2>
-                    <h4>3200 Camino Del Mar, Del Mar, CA 92014</h4>
-                    <button>Like</button>
-                    <button>Dislike</button>
-                    <h5>72 Likes</h5>
-                    <h5>4 Dislikes</h5>
                 </div>
             </div>
         </div>
@@ -228,4 +231,5 @@
         </div>
         <script type="text/javascript" src="js/scripts.js"></script> -->
     </body>
+    <script src="js/likebuttons.js"></script>
 </html>
