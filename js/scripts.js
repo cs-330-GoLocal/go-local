@@ -9,8 +9,16 @@ const msgSend = (ev) => {
     alert("Message Sent!");
 }
 
+const closeMe = (ev) => {
+    let msgBox = document.getElementById("form");
+    msgBox.classList.add("hide");
+}
+
 let msgBtn = document.querySelector(".page-follow");
 msgBtn.addEventListener("click", msgForm);
 
 let sendBtn = document.getElementById("sendbutton");
 sendBtn.addEventListener("click", msgSend);
+
+let closeBtn = document.getElementById("closebutton")
+closeBtn.addEventListener("click",closeMe)
