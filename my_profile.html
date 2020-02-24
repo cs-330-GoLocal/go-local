@@ -98,7 +98,7 @@
         </div>
         <button class = "page-follow" onclick=newPost()>New Post</button>
         <div class="form-container hide" id="form">
-            <button><i class = "fa fa"></i></button>
+            <button id = "close" class = "close" onclick = closeForm()><i class = "fa fa-times"></i></button>
             <h1>Create Post</h1>
             <br>
             <form action="" class="formi" id="formp">
@@ -121,6 +121,11 @@
         </div>
     </body>
     <script>
+        function closeForm() {
+            var postmaker = document.getElementById("form");
+            postmaker.classList.add("hide");
+        }
+        
         function newPost() {
             var postmaker = document.getElementById("form")
             postmaker.classList.remove("hide")
