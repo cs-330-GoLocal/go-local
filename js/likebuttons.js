@@ -90,3 +90,18 @@ const handleclick = (ev) =>{
 
 pressedButton(dislikeButtons);
 pressedButton(likeButtons);
+
+const favorite = document.querySelector("#favorites-button");
+const sidebar = document.querySelector('.favorites-bar');
+console.log(favorite);
+console.log(sidebar);
+
+favorite.onclick = function(){
+    if (sidebar.classList.contains("open"))
+    {
+        sidebar.classList.remove("open");
+    }
+    else{
+        sidebar.classList.add("open");
+    }
+}
