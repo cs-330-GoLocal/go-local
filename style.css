@@ -266,7 +266,6 @@ iframe {
     top: 40px;
     right: -200px;
     background-color: rgba(173, 232, 255, 0.8);
-    /* animation: slide 1s ease-in-out forwards; */
 }
 
 .open{
