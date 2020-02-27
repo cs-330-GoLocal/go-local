@@ -258,6 +258,118 @@ iframe {
     margin: 0;
 }
 
+.backmodal {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: black;
+    opacity:60%;
+}
+.modal {
+    position:fixed;
+    top:60px;
+    transform:translate(-50%,0%);
+    left:50%;
+    background-color:white;
+    border-radius:15px;
+    overflow:auto;
+    max-width:600px;
+    max-height:85%;
+}
+
+.modal h1,h2,h3,h4 {
+    margin:0;
+    padding:0;
+    padding-left:10px;
+}
+
+.modal .like-bar {
+    width: 100%;
+    height:20px;
+    display:flex;
+    flex-direction:row;
+    color:white;
+    font-weight:bold;
+}
+
+.recommend {
+    background-color:mediumaquamarine;
+    height:100%;
+}
+
+.unrecommend{
+    background-color:mediumvioletred;
+    height:100%;
+}
+
+.tabs {
+    width: 100%;
+    background-color:lightgrey;
+}
+
+.tabs > button {
+    background-color:grey;
+    border-right:3px white solid;
+    margin:0;
+    padding:3px;
+    color:white;
+    font-weight:bold;
+}
+
+.tabs > button:hover {
+    background-color:#505050;
+}
+
+.tabs > button.selected {
+    background-color: #404040;
+}
+
+.modal-imgs {
+    display:flex;
+    flex-direction:row;
+    overflow:auto;
+}
+
+.modal-imgs img{
+    height: 300px;
+}
+
+.postcard > button {
+}
+
+.modal > button {
+    background-color:transparent;
+    height:30px;
+    width:30px;
+    color:white;
+    position:absolute;
+    border:3px solid white;
+    border-radius:50%;
+}
+
+#comments h3, #comments p {
+    font-size:12pt;
+    margin:0;
+    padding:0;
+}
+
+#comments p {
+    font-weight:normal;
+}
+
+.tabpane {
+    min-height:50px;
+}
+
+.tabpane button {
+    background-color:transparent;
+    color:black;
+    border:3px solid black;
+    font-weight:bold;
+}
+
 .favorites-bar{
     z-index: 3;
     position: fixed;
@@ -281,4 +393,3 @@ iframe {
         transform: translate(-200px, 0px);
     }
 }
-
