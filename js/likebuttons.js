@@ -90,3 +90,60 @@ const handleclick = (ev) =>{
 
 pressedButton(dislikeButtons);
 pressedButton(likeButtons);
+
+const favorite = document.querySelector("#favorites-button");
+const sidebar = document.querySelector('.favorites-bar');
+// console.log(favorite);
+// console.log(sidebar);
+
+favorite.onclick = function(){
+    if (sidebar.classList.contains("open"))
+    {
+        sidebar.classList.remove("open");
+    }
+    else{
+        sidebar.classList.add("open");
+    }
+}
+
+//THIS IS THE IMPLEMENTATION OF THE FAVORITES 
+
+const getFavorites = () => {   //this function finds all the favorites button and pushes them into a new array 
+    const favorites = document.querySelectorAll('.prfbtn');
+    let newarray = [];
+    for(let i = 2; i < favorites.length; i++){
+        newarray.push(favorites[i]);
+    }
+    console.log(newarray);
+    return newarray;
+} 
+
+const favoriteButtons = getFavorites(); //gives me an array of all the favorites buttons 
+
+const pressedFavorites = (buttonarray) => {
+    for(elem of buttonarray){
+        elem.onclick = handleFavorites; 
+    }
+}
+
+const appendUL = (string) => {
+    let node = document.createElement('LI');
+    let text = document.createTextNode(string);
+    node.appendChild(text);
+    document.getElementById("myList").appendChild(node);
+}
+const handleFavorites = (ev) => {  
+    let target = ev.currentTarget;
+    console.log(target);
+    let parent = ev.currentTarget.parentElement;
+    console.log(parent);
+    let h2 = parent.getElementsByTagName('h2'); 
+    let innertext = h2[0].innerHTML;
+    console.log(innertext);  //returns the h2 tag inside the cards 
+    appendUL(innertext);
+}
+
+pressedFavorites(favoriteButtons);
+
+
+
