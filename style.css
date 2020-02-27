@@ -351,9 +351,8 @@ iframe {
     background-color:transparent;
     height:30px;
     width:30px;
-    color:white;
-    position:absolute;
-    border:3px solid white;
+    color:black;
+    border:3px solid black;
     border-radius:50%;
 }
 
@@ -407,4 +406,49 @@ iframe {
 
 .prfbtn.gold:hover {
     background-color: gold;
+}
+
+.modal > button.liked{
+    background-color:green;
+}
+
+.modal > button.dled {
+    background-color:red;
+}
+
+.profile-card{
+    background-color:darkslateblue;
+    max-width:400px;
+    max-height:400px;
+    min-width:400px;
+    border-radius: 30px;
+    margin: 20px;
+    overflow:hidden;
+    color:white;
+    margin-bottom:15px;
+    text-decoration:none;
+}
+
+.profile-card > .postimg{
+    max-width:250px;
+    max-height:250px;
+    width:200px;
+    height:200px;
+    overflow:hidden;
+    border-radius:50%;
+    z-index:2;
+}
+
+.profile-card  > .info {
+    position:relative;
+    margin-left:100px;
+    left:0;
+    top:-70px;
+    margin-bottom:-40px;
+    z-index:1;
+}
+
+.profile-card > h4 {
+    margin-left:30px;
+    padding-bottom:20px;
 }
