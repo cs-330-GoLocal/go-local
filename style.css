@@ -16,7 +16,7 @@ nav {
     display:flex;
     flex:1 auto auto 2 2;
     flex-direction:row;
-    z-index:2;
+    z-index:5;
     vertical-align:center;
     align-items:stretch;
 }
@@ -275,6 +275,7 @@ iframe {
     height:100%;
     background-color: black;
     opacity:60%;
+    z-index:3;
 }
 .modal {
     position:fixed;
@@ -288,6 +289,7 @@ iframe {
     max-height:85%;
     min-width:250px;
     padding-bottom:20px;
+    z-index:3;
 }
 
 .modal h1,h2,h3,h4 {
