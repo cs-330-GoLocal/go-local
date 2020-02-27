@@ -1,7 +1,8 @@
 function makeModal(info,images,ratio) {
+
     const modal_template = 
     `<div class = "backmodal" onclick = "closeModal()">
-    </div class = "backmodal">
+    </div class = "backmodal">*/
     <div class="modal" ratioAttr = "${ratio}">
         <button onclick=closeModal()><i class="fa fa-times"></i></button>
         <div class = "modal-imgs">
@@ -31,8 +32,8 @@ function makeModal(info,images,ratio) {
             </div>
         </div>
     </div>`;
-
-    document.querySelector("body").innerHTML += modal_template;
+    console.log("hello");
+    document.querySelector("#dummy").innerHTML += modal_template;
     onTab(0);
 }
 
