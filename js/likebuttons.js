@@ -135,12 +135,31 @@ const appendUL = (string) => {
 const handleFavorites = (ev) => {  
     let target = ev.currentTarget;
     console.log(target);
-    let parent = ev.currentTarget.parentElement;
-    console.log(parent);
-    let h2 = parent.getElementsByTagName('h2'); 
-    let innertext = h2[0].innerHTML;
-    console.log(innertext);  //returns the h2 tag inside the cards 
-    appendUL(innertext);
+    if (target.classList.contains("gold")){
+        target.classList.remove("gold");
+        let parent = ev.currentTarget.parentElement;
+        let h2 = parent.getElementsByTagName('h2'); 
+        let innertext = h2[0].innerHTML;
+        let liElements = document.getElementById("myList").getElementsByTagName("LI");
+        console.log(liElements);
+        for(elem of liElements){
+            if(elem.innerHTML == innertext){
+                elem.parentNode.removeChild(elem);
+                break;
+            }
+        }
+    }
+    else{
+        target.classList.add("gold");
+        let parent = ev.currentTarget.parentElement;
+        console.log(parent);
+        let h2 = parent.getElementsByTagName('h2'); 
+        let innertext = h2[0].innerHTML;
+        console.log(innertext);  //returns the h2 tag inside the cards 
+        appendUL(innertext);  
+    }
+    
+
 }
 
 pressedFavorites(favoriteButtons);
