@@ -109,9 +109,9 @@ favorite.onclick = function(){
 //THIS IS THE IMPLEMENTATION OF THE FAVORITES 
 
 const getFavorites = () => {   //this function finds all the favorites button and pushes them into a new array 
-    const favorites = document.querySelectorAll('.prfbtn');
+    const favorites = document.querySelectorAll('.favbtn');
     let newarray = [];
-    for(let i = 2; i < favorites.length; i++){
+    for(let i = 0; i < favorites.length; i++){
         newarray.push(favorites[i]);
     }
     console.log(newarray);
@@ -137,7 +137,7 @@ const handleFavorites = (ev) => {
     console.log(target);
     if (target.classList.contains("gold")){
         target.classList.remove("gold");
-        let parent = ev.currentTarget.parentElement;
+        let parent = ev.currentTarget.parentElement.parentElement;
         let h2 = parent.getElementsByTagName('h2'); 
         let innertext = h2[0].innerHTML;
         let liElements = document.getElementById("myList").getElementsByTagName("LI");
@@ -151,7 +151,7 @@ const handleFavorites = (ev) => {
     }
     else{
         target.classList.add("gold");
-        let parent = ev.currentTarget.parentElement;
+        let parent = ev.currentTarget.parentElement.parentElement;
         console.log(parent);
         let h2 = parent.getElementsByTagName('h2'); 
         let innertext = h2[0].innerHTML;
