@@ -89,6 +89,7 @@ function addQuestion() {
 }
 
 for(card of document.querySelectorAll(".postcard")) {
+    console.log("hello");
     card.addEventListener("click",function(ev) {
         a = ev.currentTarget.querySelectorAll("h2,h3,h4");
         b = ev.currentTarget.querySelectorAll("img");
