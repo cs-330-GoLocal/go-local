@@ -67,6 +67,7 @@ iframe {
 }
 
 .prfbtn {
+    position: relative;
     max-height:35px;
     min-width:35px;
     border:3px solid white;
@@ -77,7 +78,13 @@ iframe {
     background-color:transparent;
     float:right;
 }
+.favbtn{
+    position: absolute;
+}
 
+.prfbtn:focus{
+    outline: none;
+}
 .prfbtn:hover {
     background-color:#FFFFFF22;
 }
@@ -229,6 +236,7 @@ iframe {
 }
 
 .postimg {
+    position: relative;
     width:400px;
     height:200px;
     overflow:hidden;
@@ -236,7 +244,7 @@ iframe {
 }
 
 .postimg.duo img {
-    width:auto;
+    width:200px;
     height:200px;
     max-width:200px;
     margin-top: 0px
@@ -282,3 +290,10 @@ iframe {
     }
 }
 
+.gold{
+    background-color: gold;
+}
+
+.prfbtn.gold:hover {
+    background-color: gold;
+}
