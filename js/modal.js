@@ -26,7 +26,7 @@ function makeModal(info,images,ratio) {
         </div>
         <div class = "tabpane" id = "questions">
             <input type = "text">
-            <button>Ask</button>
+            <button onclick="addQuestion()">Ask</button>
             <div class="ask">
             </div>
         </div>
@@ -75,6 +75,17 @@ function addComment() {
     </div>`;
     document.querySelector(".opin").innerHTML += commentcard;
     document.querySelector("#comments > input").value = "";
+}
+
+function addQuestion() {
+    const comment = document.querySelector("#questions > input").value;
+    const commentcard = 
+    `<div class = "comment-card">
+        <h3>Kiara<h3>
+        <p>${comment}</p>
+    </div>`;
+    document.querySelector(".ask").innerHTML += commentcard;
+    document.querySelector("#questions > input").value = "";
 }
 
 for(card of document.querySelectorAll(".postcard")) {
