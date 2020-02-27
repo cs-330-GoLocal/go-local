@@ -92,7 +92,7 @@ iframe {
 
 .category {
     width: 90%;
-    max-height: 400px;
+    max-height: 450px;
     border-radius:20px;
     background-color:white;
     margin:20px;
@@ -210,12 +210,13 @@ iframe {
 .postcard {
     background-color:darkslateblue;
     max-width:400px;
-    max-height:320px;
+    max-height:400px;
     min-width:400px;
     border-radius: 30px;
     margin: 20px;
     overflow:hidden;
     color:white;
+    margin-bottom:15px;
 }
 
 .postcard:hover{
@@ -277,6 +278,8 @@ iframe {
     overflow:auto;
     max-width:600px;
     max-height:85%;
+    min-width:250px;
+    padding-bottom:20px;
 }
 
 .modal h1,h2,h3,h4 {
@@ -336,9 +339,6 @@ iframe {
     height: 300px;
 }
 
-.postcard > button {
-}
-
 .modal > button {
     background-color:transparent;
     height:30px;
@@ -349,13 +349,13 @@ iframe {
     border-radius:50%;
 }
 
-#comments h3, #comments p {
+#comments h3, #comments p, #questions h3, #questions p {
     font-size:12pt;
     margin:0;
     padding:0;
 }
 
-#comments p {
+#comments p, #questions p {
     font-weight:normal;
 }
 
