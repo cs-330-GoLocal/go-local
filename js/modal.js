@@ -4,9 +4,9 @@ function makeModal(info,images,ratio,c,d) {
     `<div class = "backmodal" onclick = "closeModal()">
     </div class = "backmodal">
     <div class="modal" ratioAttr = "${ratio}">
-        <button onclick=closeModal()><i class="fa fa-times"></i></button>
-        <button onclick="likeIt()"><i class = "fa fa-thumbs-up"></i></button>
-        <button onclick="dislikeIt()"><i class = "fa fa-thumbs-down"></i></button>
+        <button onclick=closeModal() class="ptr"><i class="fa fa-times"></i></button>
+        <button onclick="likeIt()" class="ptr"><i class = "fa fa-thumbs-up"></i></button>
+        <button onclick="dislikeIt()" class="ptr"><i class = "fa fa-thumbs-down"></i></button>
         <div class = "modal-imgs">
         ${images}
         </div>
@@ -17,19 +17,19 @@ function makeModal(info,images,ratio,c,d) {
         </div>
         
         <div class = "tabs">
-            <button onclick="onTab(0)">Comments</button>
-            <button onclick="onTab(1)">Questions</button>
+            <button class="ptr" onclick="onTab(0)">Comments</button>
+            <button class="ptr" onclick="onTab(1)">Questions</button>
         </div>
     
         <div class = "tabpane" id = "comments">
             <input type="text">
-            <button onclick="addComment()">Post</button>
+            <button class="ptr" onclick="addComment()">Post</button>
             <div class="opin">
             </div>
         </div>
         <div class = "tabpane" id = "questions">
             <input type = "text">
-            <button onclick="addQuestion()">Ask</button>
+            <button class="ptr" onclick="addQuestion()">Ask</button>
             <div class="ask">
             </div>
         </div>
