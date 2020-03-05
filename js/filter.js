@@ -209,7 +209,7 @@ const Tags = () =>{
     submit_button.onclick = addTag(textvalue);
 }
 const addTag = (text) => {
-    let template = `<a class="tag">${text} <span class="remove-icon"> × </span></a>`
+    /*let template = `<a class="tag">${text} <span class="remove-icon"> × </span></a>`
     let element = document.getElementById('alltags');
     element.innerHTML += template;
     const remove_icons = document.querySelectorAll(".remove-icon");
@@ -219,6 +219,7 @@ const addTag = (text) => {
             filter();
         })
     }
+    */
 }
 
 function autocomplete(inp, arr) {

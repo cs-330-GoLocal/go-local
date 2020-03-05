@@ -4,7 +4,7 @@ body{
     width: 100%;
     border:none;
     margin:0;
-    background-color:#c4e5f2;
+    background-color:white;
     font-family: 'Montserrat',sans-serif;
 }
 
@@ -104,17 +104,17 @@ iframe {
 
 .category {
     width: 90%;
-    max-height: 450px;
     border-radius:20px;
-    background-color:#344973;
-    margin:20px;
+    background-color:transparent;
 }
 
 .category h1 {
     font-family:'Bebas Neue',cursive;
-    color:white;
-    font-size:42px;
-    padding:0;
+    color:#010b40;
+    font-size:60px;
+    padding-left:30px;
+    margin-bottom:-20px;
+    padding-top:0;
 }
 
 .cat-content {
@@ -122,6 +122,9 @@ iframe {
     flex-direction:row;
     align-items:stretch;
     overflow:auto;
+    background-color:#145dc4;
+    border-top:10px solid #25e8ab;
+    border-radius:30px;
 }
 
 .page-follow {
@@ -160,7 +163,7 @@ iframe {
 #del-mar {
     background-image:url("images/del-mar-background.jpg");
     background-position-y:-250px;
-    height:300px;
+    height:400px;
     margin-bottom:20px;
 }
 
@@ -225,10 +228,6 @@ iframe {
     margin:0;
 }
 
-.category h1{
-    margin: 10px 0 0 30px;
-}
-
 .postcard {
     background-color:#011526;
     max-width:400px;
@@ -239,6 +238,7 @@ iframe {
     overflow:hidden;
     color:white;
     margin-bottom:15px;
+    padding-bottom:15px;
 }
 
 .postcard:hover{
@@ -435,7 +435,7 @@ iframe {
 }
 
 .profile-card{
-    background-color:darkslateblue;
+    background-color:#00000055;
     max-width:400px;
     max-height:400px;
     min-width:400px;
