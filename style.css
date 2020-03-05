@@ -96,8 +96,15 @@ iframe {
 
 .main {
     padding-top:40px;
-    display:flex;
     width: 100%;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+
+.cats, .drummy {
+    width:100%;
+    display:flex;
     align-items:center;
     flex-direction:column;
 }

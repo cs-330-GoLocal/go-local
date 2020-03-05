@@ -141,7 +141,7 @@ function createPosts(category,photourl,location,description) {
     }
 
     var newCategory = true;
-    var categories = document.getElementsByClassName("category");
+    var categories = document.querySelectorAll(".drummy > .category");
 
     for(item of categories) {
         if(item.id === category) {
@@ -155,6 +155,7 @@ function createPosts(category,photourl,location,description) {
             <h1>${category}</h1>
             <div class = "cat-content">
                 <div class = "postcard">
+                    <button class="prfbtn favbtn ptr" style="z-index:3;"><i class = "fa fa-star"></i></button>
                     <div class = "postimg">
                         <img src="${photourl}" alt="${location} Picture">
                     </div>
@@ -164,11 +165,12 @@ function createPosts(category,photourl,location,description) {
             </div>
         </div>
         `;
-        document.querySelector(".main").innerHTML += template;
+        document.querySelector(".drummy").innerHTML += template;
     }
     else {
         var template = `
-                <div class = "postcard">
+                <div class = "postcard zmi">
+                    <button class="favbtn prfbtn ptr" style="z-index:3;"><i class = "fa fa-star"></i></button>
                     <div class = "postimg">
                         <img src="${photourl}" alt="${location} Picture">
                     </div>
@@ -176,7 +178,7 @@ function createPosts(category,photourl,location,description) {
                     <h4>${description}</h4>
                 </div>
             `;
-        document.querySelector("#" + category + "> .cat-content").innerHTML += template;
+        document.querySelector(".drummy > #" + category + " > .cat-content").innerHTML += template;
     }
 }
 
@@ -185,13 +187,20 @@ function filter() {
 
   let b = document.querySelectorAll(".tag");
   for (elem of b) {
-    listOfFilters.push(elem.innerText.substring(0,elem.innerText.length-2).toLowerCase());
+    listOfFilters.push(elem.innerText.substring(0,elem.innerText.indexOf(" ×")).toLowerCase());
   }
 
-    for (cat of document.querySelectorAll(".category")) {
-        cat.parentNode.removeChild(cat);
+  if(listOfFilters.length == 0) {
+    document.querySelector(".cats").style = "";
+    document.querySelector(".drummy").style = "display:none;";
+  }
+  else {
+    document.querySelector(".cats").style = "display:none;";
+    document.querySelector(".drummy").style = "";
+    for (cat of document.querySelectorAll(".drummy > .category")) {
+      cat.parentNode.removeChild(cat);
     }
-    
+  
     for(filterx of listOfFilters){
       for(card of cardrs) {
         if(card.categories.includes(filterx)) {
@@ -200,6 +209,34 @@ function filter() {
         }
       }
     }
+
+    for(card of document.querySelectorAll(".drummy .postcard")) {
+      console.log("hello");
+      card.addEventListener("click",function(ev) {
+          a = ev.currentTarget.querySelectorAll("h2,h3,h4");
+          b = ev.currentTarget.querySelectorAll("img");
+          c = 27;
+          d = 2;
+          e = Math.ceil((c/(c+d))*100);
+          texts = ``;
+          images = ``;
+          for(text of a) {
+              texts+=text.outerHTML;
+          }
+          for(image of b) {
+              images += image.outerHTML;
+          }
+          if(ev.target.classList.contains("fa") || ev.target.classList.contains("favbtn")) {
+              return;
+          }
+          makeModal(texts,images,e,c,d);
+      });
+    }
+
+    for(fav of document.querySelectorAll(".drummy .favbtn")) {
+      
+    }
+  }
 }
 
 let textvalue;
@@ -209,17 +246,16 @@ const Tags = () =>{
     submit_button.onclick = addTag(textvalue);
 }
 const addTag = (text) => {
-    /*let template = `<a class="tag">${text} <span class="remove-icon"> × </span></a>`
+    let template = `<a class="tag">${text} <span class="remove-icon"> × </span></a>`
     let element = document.getElementById('alltags');
     element.innerHTML += template;
     const remove_icons = document.querySelectorAll(".remove-icon");
     for(icon of remove_icons){
         icon.addEventListener("click", function(ev){
-            ev.currentTarget.parentElement.parentElement.removeChild(icon.parentElement);
+            ev.currentTarget.parentElement.parentElement.removeChild(ev.currentTarget.parentElement);
             filter();
         })
     }
-    */
 }
 
 function autocomplete(inp, arr) {
