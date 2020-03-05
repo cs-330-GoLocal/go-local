@@ -478,7 +478,7 @@ iframe {
     transform: translateY(-2.5px);
 }
 
-.fa-angle-right{
+.fa-angle-double-right{
     cursor: pointer;
     margin-left: 5px;
     font-size: 2rem;

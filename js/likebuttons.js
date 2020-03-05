@@ -164,7 +164,7 @@ const handleFavorites = (ev) => {
 
 pressedFavorites(favoriteButtons);
 
-const rightangle = document.querySelector('.fas.fa-angle-right');
+const rightangle = document.querySelector('.fa-angle-double-right');
 rightangle.onclick = function(){
     if (sidebar.classList.contains("open"))
     {
