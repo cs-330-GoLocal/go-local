@@ -1,4 +1,4 @@
-{ "cards": [
+[
     {
         "categories": ["food", "lunch", "american"],
         "name": "Board and Brew",
@@ -128,4 +128,3 @@
         "images": ["https://ca-times.brightspotcdn.com/dims4/default/fd68b82/2147483647/strip/true/crop/2047x1151+0+0/resize/840x472!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F27%2F96%2F17298b71835740e4b962803b6ff3%2Fsd-1536109992-mxo5qo0bvf-snap-image"]
     }
 ]
-}

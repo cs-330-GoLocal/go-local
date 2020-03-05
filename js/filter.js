@@ -1,3 +1,207 @@
+cards = `[
+  {
+      "categories": ["food", "lunch", "american"],
+      "name": "Board and Brew",
+      "info": ["Lunch", "Sandwiches", "1212 Camino Del Mar #2506, Del Mar, CA 92014"],
+      "images": ["images/Board-and-Brew.jpg", "images/Board-and-Brew-Food.jpg"]
+  },
+  {
+      "categories":  ["food", "lunch", "dinner"],
+      "name": "The Brigrantine",
+      "info": ["Lunch and Dinner", "Seafood", "3263 Camino Del Mar, Del Mar, CA 92014"],
+      "images": ["images/Brigantine.jpg", "images/The-Brig-Food.jpg"]
+  },
+  {
+      "categories":  ["food", "breakfast", "lunch", "dinner", "american"],
+      "name": "Americana",
+      "info": ["Breakfast, Lunch and Dinner", "American cuisine", "1454 Camino Del Mar, Del Mar, CA 92014"],
+      "images": ["images/Americana.jpg", "images/Americana-Food.jpeg"]
+  },
+  {
+      "categories": ["food", "lunch", "dinner", "american"],
+      "name": "Sbicca",
+      "info": ["Lunch and Dinner", "American Bistro", "215 15th St, Del Mar, CA 92014"],
+      "images": ["images/sbicca.jpg", "images/sbicca-food.jpg"]
+  },
+  {
+      "categories": ["food", "breakfast", "lunch", "dinner", "mexican"],
+      "name": "Roberto's Tacos",
+      "info": ["Breakfast, Lunch and Dinner", "Mexican cuisine", "2206 Carmel Valley Rd #3704, Del Mar, CA 92014"],
+      "images": ["images/robertos.jpg", "images/robertos-food.jpg"]
+  },
+  {
+      "categories": ["food", "lunch", "dinner", "japanese"],
+      "name": "Shimbashi",
+      "info": ["Lunch and Dinner", "Japanese cuisine", "1555 Camino Del Mar #201"],
+      "images": ["images/shimbashi.jpg", "images/shimbashi-food.jpg"]
+  },
+
+  {
+      "categories":  ["activities", "outdoor", "active", "relaxing", "camping"],
+      "name": "San Elijo State Beach",
+      "info": ["2050 S Coast Hwy 101, Cardiff, CA 92007"],
+      "images": ["images/San-Elijo-campground.jpeg"]
+  },
+  {
+      "categories":  ["activities", "outdoor", "active", "relaxing", "camping"],
+      "name": "Carlsbad State Beach",
+      "info": ["7201 Carlsbad Blvd, Carlsbad, CA 92008"],
+      "images": ["images/Carlsbad-campground.jpg"]
+  },
+
+  {
+      "categories":  ["nightlife", "bars/clubs", "events", "music"],
+      "name": "Jimmy O's",
+      "info": ["Sports bar", "225 West 15th St, Del Mar, CA 92014"],
+      "images": ["images/JimmyOs.jpg"]
+  },
+  {
+      "categories":  ["nightlife", "bars/clubs", "events", "music"],
+      "name": "Oggi's",
+      "info": ["Casual sports bar", "12840 Carmel Country Rd, San Diego, CA 92130"],
+      "images": ["images/Oggis.jpg"]
+  },
+
+  {
+      "categories":  ["activities", "outdoor", "active", "relaxing", "beaches", "parks"],
+      "name": "Powerhouse Park and Beach",
+      "info": ["1658 Coast Blvd, Del Mar, CA 92014"],
+      "images": ["images/Powerhouse-Park.jpg"]
+  },
+  {
+      "categories":  ["activities", "outdoor", "active", "relaxing", "beaches"],
+      "name": "Dog Beach",
+      "info": ["3200 Camino Del Mar, Del Mar, CA 9201"],
+      "images": ["images/dog-beach.jpg"]
+  },
+
+  {
+      "categories":  ["activities", "sightseeing", "museums"],
+      "name": "Free Flight Exotic Bird Sanctuary",
+      "info": ["2132 Jimmy Durante Blvd, Del Mar, CA 9201"],
+      "images": ["https://pbs.twimg.com/media/EIZnt-LWwAIZ9p4.jpg"]
+  },
+  {
+      "categories":  ["activities", "sightseeing", "museums"],
+      "name": "Lux Art Institute",
+      "info": ["1550 S El Camino Real, Encinitas, CA 9202"],
+      "images": ["https://yournorthcounty.com/wp-content/uploads/2014/03/Lux-Art-Institute-in-Encinitas1-1024x971.jpg"]
+  },
+
+  {
+      "categories":  ["activities", "sightseeing", "landmarks", "nightlife", "bars/clubs", "family friendly"],
+      "name": "Del Mar Plaza",
+      "info": ["1555 Camino Del Mar, Del Mar, CA 92014"],
+      "images": ["https://cdn.vox-cdn.com/thumbor/la5vX3VDVPKMx89TUbNNbnG5aT8=/0x0:1200x800/1820x1213/filters:focal(504x304:696x496)/cdn.vox-cdn.com/uploads/chorus_image/image/62701220/2.0.jpg"]
+  },
+  {
+      "categories":  ["activities", "sightseeing", "landmarks", "outdoor", "active", "relaxing"],
+      "name": "Torrey Pines Gliderport",
+      "info": ["2800 Torrey Pines Scenic Dr, La Jolla, CA 92037"],
+      "images": ["https://media.sandiegoreader.com/img/photos/2019/07/15/Torrey-Pines-Paraglider-CREDIT-SMJoness-iStock-GettyImages-908459366.jpg"]
+  },
+  {
+      "categories":  ["activities", "sightseeing", "landmarks", "events", "music", "art", "shows"],
+      "name": "Del Mar Fairgrounds",
+      "info": ["2260 Jimmy Durante Blvd, Del Mar, CA 92014"],
+      "images": ["https://guardtop.com/wp-content/uploads/2018/02/del-mar-fairgrounds.jpg"]
+  },
+
+  {
+      "categories":  ["activities", "sightseeing", "events", "music", "shows"],
+      "name": "Del Mar Racetrack",
+      "info": ["Races July-September", "2260 Jimmy Durante Blvd, Del Mar, CA 92014"],
+      "images": ["https://www.dmtc.com/data/assets/Static-Pages/DM-Gen/Del-Mar-Paddock.jpg"]
+  },
+
+  {
+      "categories":  ["activities", "events", "music", "shows", "pop", "rock", "comedy", "outdoor", "active", "amusement parks"],
+      "name": "Del Mar Fair",
+      "info": ["Runs June 1 - July 4", "2260 Jimmy Durante Blvd, Del Mar, CA 92014"],
+      "images": ["https://scrippsamg.com/wp-content/uploads/2017/06/shutterstock_214871359.jpg"]
+  },
+
+  {
+      "categories":  ["events", "music", "shows", "festivals", "pop", "rock"],
+      "name": "Kaboo",
+      "info": ["Music Festival", "September", "2260 Jimmy Durante Blvd, Del Mar, CA 92014"],
+      "images": ["https://ca-times.brightspotcdn.com/dims4/default/fd68b82/2147483647/strip/true/crop/2047x1151+0+0/resize/840x472!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F27%2F96%2F17298b71835740e4b962803b6ff3%2Fsd-1536109992-mxo5qo0bvf-snap-image"]
+  }
+]`
+
+cardrs = JSON.parse(cards)
+
+function createPosts(category,photourl,location,description) {
+    if(photourl === ""){
+        photourl = "images/GoLocal-logo.jpeg";
+    }
+
+    if(category === ""){
+        category = "Blank"
+    }
+
+    var newCategory = true;
+    var categories = document.getElementsByClassName("category");
+
+    for(item of categories) {
+        if(item.id === category) {
+            newCategory = false;
+        }
+    }
+
+    if(newCategory){
+        var template = `
+        <div class ="category" id = "${category}">
+            <h1>${category}</h1>
+            <div class = "cat-content">
+                <div class = "postcard">
+                    <div class = "postimg">
+                        <img src="${photourl}" alt="${location} Picture">
+                    </div>
+                    <h2>${location}</h2>
+                    <h4>${description}</h4>
+                </div>
+            </div>
+        </div>
+        `;
+        document.querySelector(".main").innerHTML += template;
+    }
+    else {
+        var template = `
+                <div class = "postcard">
+                    <div class = "postimg">
+                        <img src="${photourl}" alt="${location} Picture">
+                    </div>
+                    <h2>${location}</h2>
+                    <h4>${description}</h4>
+                </div>
+            `;
+        document.querySelector("#" + category + "> .cat-content").innerHTML += template;
+    }
+}
+
+function filter() {
+  let listOfFilters = [];
+
+  let b = document.querySelectorAll(".tag");
+  for (elem of b) {
+    listOfFilters.push(elem.innerText.substring(0,elem.innerText.length-2).toLowerCase());
+  }
+
+    for (cat of document.querySelectorAll(".category")) {
+        cat.parentNode.removeChild(cat);
+    }
+    
+    for(filterx of listOfFilters){
+      for(card of cardrs) {
+        if(card.categories.includes(filterx)) {
+          description = card.info.join("\n");
+          createPosts(filterx,card["images"][0],card["name"],description);
+        }
+      }
+    }
+}
+
 let textvalue;
 const Tags = () =>{
     const submit_button = document.getElementById('filter-submit');
@@ -10,8 +214,9 @@ const addTag = (text) => {
     element.innerHTML += template;
     const remove_icons = document.querySelectorAll(".remove-icon");
     for(icon of remove_icons){
-        icon.addEventListener("click", function(){
-            icon.parentElement.classList.toggle("close");
+        icon.addEventListener("click", function(ev){
+            ev.currentTarget.parentElement.parentElement.removeChild(icon.parentElement);
+            filter();
         })
     }
 }
@@ -54,6 +259,7 @@ function autocomplete(inp, arr) {
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
+              filter();
           });
           a.appendChild(b);
         }
