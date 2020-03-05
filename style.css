@@ -112,10 +112,7 @@ iframe {
 .category {
     width: 90%;
     border-radius:20px;
-    background-color:transparent;
-}
-
-.category h1 {
+    background-color:transparen1 {
     font-family:'Bebas Neue',cursive;
     color:#010b40;
     font-size:60px;
@@ -483,5 +480,21 @@ iframe {
 }
 
 .zmi {
-    cursor:zoom-in;
+    cursor: pointer;
+}
+
+.prfbtn.favbtn{
+    position: absolute;
+    left: 5px;
+    top: 2px;
+}
+.fa.fa-star, .fa.fa-user{
+    transform: translateY(-2.5px);
+}
+
+.fa-angle-double-right{
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 2rem;
+    color: white;
 }
