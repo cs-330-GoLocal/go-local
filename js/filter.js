@@ -51,6 +51,7 @@ function autocomplete(inp, arr) {
               textvalue = inp.value;
               console.log(textvalue);
               Tags();
+              inp.value = '';
               /*close the list of autocompleted values,
               (or any other open lists of autocompleted values:*/
               closeAllLists();
