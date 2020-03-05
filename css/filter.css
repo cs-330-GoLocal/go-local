@@ -27,6 +27,7 @@
     background-color: #f1f1f1;
     padding: 10px;
     font-size: 16px;
+    border-radius: 15px;
   }
   
   .autocomplete input[type=text] {
@@ -38,7 +39,7 @@
     font-size: 17px;
     border: none;
     padding: 10px;
-    background-color: DodgerBlue;
+    background-color: transparent;
     color: #fff;
     cursor: pointer;
   }
