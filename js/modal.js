@@ -7,6 +7,7 @@ function makeModal(info,images,ratio,c,d) {
         <button onclick=closeModal() class="ptr"><i class="fa fa-times"></i></button>
         <button onclick="likeIt()" class="ptr"><i class = "fa fa-thumbs-up"></i></button>
         <button onclick="dislikeIt()" class="ptr"><i class = "fa fa-thumbs-down"></i></button>
+        <button onclick="handleFavorites()" class="favbtn modal2 ptr"><i class="fa fa-star"></i></button>
         <div class = "modal-imgs">
         ${images}
         </div>

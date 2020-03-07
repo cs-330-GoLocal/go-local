@@ -120,6 +120,9 @@ const getFavorites = () => {   //this function finds all the favorites button an
 
 const favoriteButtons = getFavorites(); //gives me an array of all the favorites buttons 
 
+for(elem of favoriteButtons){
+    elem.setAttribute("title", "Add to Favorites Bar")
+}
 const pressedFavorites = (buttonarray) => {
     for(elem of buttonarray){
         elem.onclick = handleFavorites; 

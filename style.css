@@ -83,6 +83,8 @@ iframe {
     float:right;
 }
 .favbtn{
+    top: 2px;
+    left: 5px;
     position: absolute;
     background-color:#f27457
 }
@@ -484,4 +486,20 @@ iframe {
 
 .zmi {
     cursor:zoom-in;
+}
+
+.fa.fa-star{
+    transform: translateY(-3px);
+}
+
+#filter-submit{
+    background-color: #3498DB;
+}
+.modal2{
+    transform: translateY(20px);
+    outline: none;
+}
+
+.modal2 .fa.fa-star{
+    transform: translateY(0);
 }
