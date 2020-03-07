@@ -28,8 +28,8 @@
                     <button type = "submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
-            <button id="favorites-button"  class="prfbtn ptr"><i class="fa fa-star"></i></button>
-            <a class="prfbtn" href="my_profile.html"><i class = "fa fa-user"></i></a>
+            <button title="Favorites Bar" id="favorites-button"  class="prfbtn ptr"><i class="fa fa-star"></i></button>
+            <a title="Profile" class="prfbtn" href="my_profile.html"><i class = "fa fa-user"></i></a>
             <img src="images/Kiara-profile-pic.jpeg" alt="Profile Picture" class="hide">
         </nav>
         <div class = "main">
@@ -43,14 +43,14 @@
                     <h3>Home to 73 Locals!</h3>
                 </div>
             </div>
-            <div id="alltags">
-            </div>
             <div class = "formb">
                 <div class="autocomplete" style="width:300px;">
-                  <input id="myInput" type="text" name="filter" placeholder="Add A Category">
+                  <input autocomplete="off" id="myInput" type="text" name="filter" placeholder="Search in Del Mar">
                 </div>
                 <button id="filter-submit">Submit</button>
                <!--<input id="filter-submit" type="submit">--> 
+            </div>
+            <div id="alltags">
             </div>
             <div class = "drummy">
             </div>
@@ -59,9 +59,6 @@
                     <h1>Recommended Locals</h1>
                     <div class = "cat-content">
                         <a class = "profile-card" href="other_profile.html" target="_blank">
-                            <div>
-                                <button class="prfbtn favbtn"><i class="fa fa-star"></i></button>
-                            </div>
                             <div class = "postimg">
                                 <img src="images/Kyle-profile-pic.jpg" alt="Kyle Profile Picture">
                             </div>
@@ -72,9 +69,6 @@
                             <h4>Interests:</h4>
                         </a>
                         <a class = "profile-card" href="ally.html" target="_blank">
-                            <div>
-                                <button class="prfbtn favbtn"><i class="fa fa-star"></i></button>
-                            </div>
                             <div class = "postimg">
                                 <img src="images/Ally-prof-pic.jpeg" alt="Ally Profile Picture">
                             </div>
@@ -85,7 +79,6 @@
                             <h4>Interests:</h4>
                         </a>
                         <a class = "profile-card" href="ana.html" target="_blank">
-                            <div><button class="prfbtn favbtn"><i class="fa fa-star"></i></button></div>
                             <div class = "postimg">
                                 <img src="images/Ana-prof-pic.jpg" alt="Ana Profile Picture">
                             </div>

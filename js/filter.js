@@ -1,36 +1,36 @@
 cards = `[
   {
-      "categories": ["food", "lunch", "american"],
+      "categories": ["restaurant", "food", "lunch", "american"],
       "name": "Board and Brew",
       "info": ["Lunch", "Sandwiches", "1212 Camino Del Mar #2506, Del Mar, CA 92014"],
       "images": ["images/Board-and-Brew.jpg", "images/Board-and-Brew-Food.jpg"]
   },
   {
-      "categories":  ["food", "lunch", "dinner"],
+      "categories":  ["restaurant", "food", "lunch", "dinner"],
       "name": "The Brigrantine",
       "info": ["Lunch and Dinner", "Seafood", "3263 Camino Del Mar, Del Mar, CA 92014"],
       "images": ["images/Brigantine.jpg", "images/The-Brig-Food.jpg"]
   },
   {
-      "categories":  ["food", "breakfast", "lunch", "dinner", "american"],
+      "categories":  ["restaurant", "food", "breakfast", "lunch", "dinner", "american"],
       "name": "Americana",
       "info": ["Breakfast, Lunch and Dinner", "American cuisine", "1454 Camino Del Mar, Del Mar, CA 92014"],
       "images": ["images/Americana.jpg", "images/Americana-Food.jpeg"]
   },
   {
-      "categories": ["food", "lunch", "dinner", "american"],
+      "categories": ["restaurant", "food", "lunch", "dinner", "american"],
       "name": "Sbicca",
       "info": ["Lunch and Dinner", "American Bistro", "215 15th St, Del Mar, CA 92014"],
       "images": ["images/sbicca.jpg", "images/sbicca-food.jpg"]
   },
   {
-      "categories": ["food", "breakfast", "lunch", "dinner", "mexican"],
+      "categories": ["restaurant", "food", "breakfast", "lunch", "dinner", "mexican"],
       "name": "Roberto's Tacos",
       "info": ["Breakfast, Lunch and Dinner", "Mexican cuisine", "2206 Carmel Valley Rd #3704, Del Mar, CA 92014"],
       "images": ["images/robertos.jpg", "images/robertos-food.jpg"]
   },
   {
-      "categories": ["food", "lunch", "dinner", "japanese"],
+      "categories": ["restaurant", "food", "lunch", "dinner", "japanese"],
       "name": "Shimbashi",
       "info": ["Lunch and Dinner", "Japanese cuisine", "1555 Camino Del Mar #201"],
       "images": ["images/shimbashi.jpg", "images/shimbashi-food.jpg"]
@@ -326,6 +326,10 @@ function autocomplete(inp, arr) {
           /*and simulate a click on the "active" item:*/
           if (x) x[currentFocus].click();
         }
+        else if (currentFocus == -1){
+          currentFocus++;
+          if (x) x[currentFocus].click();
+        }
       }
   });
   function addActive(x) {
@@ -365,7 +369,7 @@ let everything = ["Food", "Breakfast", "Lunch", "Dinner", "Japanese", "American"
 "Mexican", "Sightseeing", "Activities", "Museums", "Landmarks", "Tours", "Outdoor", "Active", 
 "Amusement Parks", "Camping", "Hiking", "Water Activities", "Parks", "Rock Climbing", "Relaxing",
  "Beaches", "Parks", "Fishing", "Nightlife", "Bars/Clubs", "Family Friendly", "Comedy", "Events", 
- "Music", "Jazz", "Rock", "Pop", "Art", "Shows", "Festivals", "Theatre", "Dance", "Comedy"];
+ "Music", "Jazz", "Rock", "Pop", "Art", "Shows", "Festivals", "Theatre", "Dance", "Comedy", "Restaurant"];
 
 autocomplete(document.getElementById("myInput"), everything);
 
