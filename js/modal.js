@@ -3,20 +3,21 @@ function makeModal(info,images,ratio,c,d) {
     const modal_template = 
     `<div class = "backmodal" onclick = "closeModal()">
     </div class = "backmodal">
+    <button onclick=closeModal() class="ptr modal1"><i class="fa fa-times"></i></button>
+    <button onclick="handleFavorites(event)" class="favbtn modal2 ptr"><i class="fa fa-star"></i></button>
     <div class="modal" ratioAttr = "${ratio}">
-        <button onclick=closeModal() class="ptr"><i class="fa fa-times"></i></button>
-        <button onclick="likeIt()" class="ptr"><i class = "fa fa-thumbs-up"></i></button>
-        <button onclick="dislikeIt()" class="ptr"><i class = "fa fa-thumbs-down"></i></button>
-        <button onclick="handleFavorites()" class="favbtn modal2 ptr"><i class="fa fa-star"></i></button>
         <div class = "modal-imgs">
         ${images}
         </div>
         ${info}
+        <br>
         <div class = "like-bar">
             <div class = "recommend" style = "width:${ratio}%">Likes: <b>${c}</b></div>
             <div class = "unrecommend" style = "width:${100-ratio}%">Dislikes: <b>${d}</b></div>
         </div>
-        
+        <button onclick="likeIt()" class="ptr mlik"><i class = "fa fa-thumbs-up"></i></button>Likes: <b>${c}</b>
+        <button onclick="dislikeIt()" class="ptr mlik"><i class = "fa fa-thumbs-down"></i></button>Dislikes: <b>${d}</b>
+        <br>
         <div class = "tabs">
             <button class="ptr" onclick="onTab(0)">Comments</button>
             <button class="ptr" onclick="onTab(1)">Questions</button>
@@ -56,8 +57,8 @@ function onTab(id) {
 }
 
 function likeIt() {
-    likeb = document.querySelectorAll(".modal > button")[1];
-    dislikeb = document.querySelectorAll(".modal > button")[2];
+    likeb = document.querySelectorAll(".modal > button")[0];
+    dislikeb = document.querySelectorAll(".modal > button")[1];
     num1 = document.querySelector(".recommend > b");
     num2 = document.querySelector(".unrecommend > b");
 
@@ -80,11 +81,15 @@ function likeIt() {
 
     document.querySelector(".recommend").style = "width:"+e+"%;";
     document.querySelector(".unrecommend").style = "width:"+(100-e)+"%;";
+    
+    lar = document.querySelectorAll(".modal > b");
+    lar[0].innerHTML = num1.innerHTML;
+    lar[1].innerHTML = num2.innerHTML;
 }
 
 function dislikeIt() {
-    likeb = document.querySelectorAll(".modal > button")[1];
-    dislikeb = document.querySelectorAll(".modal > button")[2];
+    likeb = document.querySelectorAll(".modal > button")[0];
+    dislikeb = document.querySelectorAll(".modal > button")[1];
     num1 = document.querySelector(".recommend > b");
     num2 = document.querySelector(".unrecommend > b");
 
@@ -107,19 +112,21 @@ function dislikeIt() {
 
     document.querySelector(".recommend").style = "width:"+e+"%;"
     document.querySelector(".unrecommend").style = "width:"+(100-e)+"%;"
+
+    lar = document.querySelectorAll(".modal > b");
+    lar[0].innerHTML = num1.innerHTML;
+    lar[1].innerHTML = num2.innerHTML;
 }
 
 function closeModal() {
-    elem = document.querySelector(".modal");
-    elem.parentNode.removeChild(elem);
-    elemtwo = document.querySelector(".backmodal");
-    elemtwo.parentNode.removeChild(elemtwo);
+    elem = document.querySelector("#dummy");
+    elem.innerHTML = ``;
 }
 
 function addComment() {
     const comment = document.querySelector("#comments > input").value;
     const commentcard = 
-    `<div class = "comment-card">
+    `<div class = "comment-card" style="margin-left:10px;">
         <h3>Kiara<h3>
         <p>${comment}</p>
     </div>`;

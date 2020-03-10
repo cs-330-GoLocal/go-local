@@ -364,28 +364,35 @@ nav .prfbtn:hover {
     flex-direction:row;
     color:white;
     font-weight:bold;
+    margin-bottom:10px;
 }
 
 .recommend {
     background-color:mediumaquamarine;
     height:100%;
+    color:transparent;
 }
 
 .unrecommend{
     background-color:mediumvioletred;
     height:100%;
+    color:transparent;
 }
 
 .tabs {
     width: 100%;
     background-color:lightgrey;
+    margin-bottom:10px;
+    padding-left:20px;
+    padding-top:10px;
 }
 
 .tabs > button {
     background-color:grey;
-    border-right:3px white solid;
+    border:0;
     margin:0;
-    padding:3px;
+    margin-left:3px;
+    padding:6px;
     color:white;
     font-weight:bold;
 }
@@ -396,25 +403,35 @@ nav .prfbtn:hover {
 
 .tabs > button.selected {
     background-color: #404040;
+    border-right:3px solid white;
+    border-top:3px solid white;
+    border-left:3px solid white;
 }
 
 .modal-imgs {
     display:flex;
     flex-direction:row;
     overflow:auto;
+    min-width:100%;
+    background-color:#010b40;
 }
 
 .modal-imgs img{
     height: 300px;
 }
 
-.modal > button {
+.modal > button,.modal1,.modal2 {
     background-color:transparent;
     height:30px;
     width:30px;
     color:black;
     border:3px solid black;
     border-radius:50%;
+}
+
+.comment-card {
+    margin-top:5px;
+    margin-bottom:10px;
 }
 
 #comments h3, #comments p, #questions h3, #questions p {
@@ -429,6 +446,7 @@ nav .prfbtn:hover {
 
 .tabpane {
     min-height:50px;
+    margin-left:20px;
 }
 
 .tabpane button {
@@ -528,12 +546,53 @@ nav .prfbtn:hover {
 
 #filter-submit{
     background-color: #3498DB;
-}
-.modal2{
-    transform: translateY(20px);
-    outline: none;
+
 }
 
 .modal2 .fa.fa-star{
-    transform: translateY(0);
+    transform: translateY(4px);
+    transform:translateX(-2px);
+}
+
+.mlik{
+    margin-bottom:10px;
+    margin-left:16%;
+    margin-right:5px;
+}
+
+.mlik:hover {
+    background-color:lightgrey;
+}
+
+.modal2{
+    background-color:darkgoldenrod;
+    position:fixed;
+    z-index:4;
+    top:44px;
+    left:40%;
+}
+
+.modal1 {
+    background-color:#3498DB;
+    position:fixed;
+    z-index:4;
+    top:44px;
+    left:50%;
+    color:white;
+    width:100px;
+    border-radius:20px;
+    transform:translateX(-50px);
+
+}
+
+.modal1:hover{
+    background-color:#B9DFFF;
+}
+
+.modal2:hover{
+    background-color:goldenrod;
+}
+
+.modal2.gold {
+    background-color:gold;
 }
