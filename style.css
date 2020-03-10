@@ -15,11 +15,11 @@ nav {
     background-color:#010b40;
     color:white;
     display:flex;
-    flex:1 auto auto 2 2;
     flex-direction:row;
     z-index:5;
     vertical-align:center;
     align-items:stretch;
+    justify-content:center;
 }
 
 .logotext {
@@ -29,11 +29,13 @@ nav {
     font-size:30px;
     line-height:40px;
     flex: 1 1 auto;
+
 }
 
 .search {
     flex: 1 1 auto;
     cursor:not-allowed;
+    padding-top:4px;
 }
 
 .search input, .search button{
@@ -66,6 +68,10 @@ nav img, iframe {
     padding-left:10px
 }
 
+nav a {
+    padding-top:2px;
+}
+
 iframe {
     fill:white;
 }
@@ -73,20 +79,43 @@ iframe {
 .prfbtn {
     position: relative;
     max-height:35px;
+    width:35px;
     min-width:35px;
     border:3px solid white;
     text-align:center;
     line-height:35px;
     color:white;
-    border-radius:50%;
+    border-radius:18px;
     background-color:transparent;
     float:right;
+    text-decoration:none;
 }
+
+nav .prfbtn:hover {
+    display:flex;
+    flex-direction:row;
+    vertical-align:center;
+    align-items:center;
+    padding-left:10px;
+    width:125px;
+}
+
+.prfbtn h3 {
+    display:none;
+}
+.prfbtn:hover h3 {
+    display:block;
+    text-decoration: none;
+    font-size:10pt;
+}
+
 .favbtn{
     top: 2px;
     left: 5px;
     position: absolute;
-    background-color:#f27457
+    background-color:#f27457;
+    font-family:'Montserrat','sans-serif';
+    font-weight:bold;
 }
 
 .prfbtn:focus{
@@ -255,9 +284,14 @@ iframe {
 }
 
 .postcard h2, .postcard h3, .postcard h4 {
-    text-align:center;
+    text-align:left;
     margin:0;
+    margin-left:20px;
+}
 
+.postcard button {
+    margin-top:-30px;
+    margin-right:3px;
 }
 
 .postimg {

@@ -144,8 +144,16 @@ for(card of document.querySelectorAll(".postcard")) {
         a = ev.currentTarget.querySelectorAll("h2,h3,h4");
         b = ev.currentTarget.querySelectorAll("img");
         c = parseInt(ev.currentTarget.getAttribute("likes"));
+        if(isNaN(c)){
+            c = 4;
+        }
         d = parseInt(ev.currentTarget.getAttribute("dls"));
+        if(isNaN(d)){
+            d = 1;
+        }
+
         e = Math.ceil((c/(c+d))*100);
+
         texts = ``
         images = ``
         for(text of a) {

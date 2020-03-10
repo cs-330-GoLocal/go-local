@@ -16,13 +16,11 @@
             <a href="#"><img src="images/travel.png" alt="GoLocal Logo"></a>
             <a href="#" class="logotext">GoLocal</a>
             <div class = "search">
-                <form>
-                    <input type="text" placeholder="Search" name="search">
-                    <button type = "submit"><i class="fa fa-search"></i></button>
-                </form>
+                <input type="text" placeholder="Search" name="search" disabled>
+                <button type = "submit" disabled><i class="fa fa-search"></i></button>
             </div>
-            <button class="prfbtn"><i class="fa fa-star"></i></button>
-            <a class="prfbtn" href="#"><i class = "fa fa-user"></i></a>
+            <a class="prfbtn" href="del_mar.html"><i class="fa fa-suitcase"></i><h3>My Trip</h3></button>
+            <a class="prfbtn" href="#"><i class = "fa fa-user"></i><h3>My Profile</h3></a>
             <img src="images/Kiara-profile-pic.jpeg" alt="Profile Picture" class="hide">
         </nav>
         <div class = "main">
@@ -36,32 +34,38 @@
             <div class = "category" id = "Restaurants">
                 <h1>Restaurants</h1>
                 <div class = "cat-content">
-                    <div class = "postcard restaurant">
+                    <div class = "postcard restaurant zmi">
                         <div class = "postimg duo">
                             <img src="images/Flat-Top.jpg" alt="Flat Top Picture">
                             <img src="images/Flat-Top-Food.jpg" alt="Flat Top Food Picture">
                         </div>
                         <h2>Flat Top Grill</h2>
+                        <button class="prfbtn ptr" onclick="editPost(event)"><i class="fa fa-edit"></i></button>
+                        <button class="prfbtn ptr" onclick="deleter(event)"><i class="fa fa-trash"></i></button>
                         <h3>Lunch and Dinner</h3>
                         <h3>Stir-fry</h3>
                         <h4>707 Church St, Evanston, IL 60201</h4>
                     </div>
-                    <div class = "postcard restaurant">
+                    <div class = "postcard restaurant zmi">
                         <div class = "postimg duo">
                             <img src="images/Todoroki.jpg" alt="Todoroki Picture">
                             <img src="images/Todoroki-Food.jpeg" alt="Todoroki Food Picture">
                         </div>
                         <h2>Todoroki</h2>
+                        <button class="prfbtn ptr" onclick="editPost(event)"><i class="fa fa-edit"></i></button>
+                        <button class="prfbtn ptr" onclick="deleter(event)"><i class="fa fa-trash"></i></button>
                         <h3>Lunch and Dinner</h3>
                         <h3>Hibachi and Sushi</h3>
                         <h4>526 Davis St, Evanston, IL 60201</h4>
                     </div>
-                    <div class = "postcard restaurant">
+                    <div class = "postcard restaurant zmi">
                         <div class = "postimg duo">
                             <img src="images/Le-Peep.jpg" alt="Le Peep Picture">
                             <img src="images/Le-Peep-Food.jpg" alt="Le Peep Food Picture">
                         </div>
                         <h2>Le Peep</h2>
+                        <button class="prfbtn ptr" onclick="editPost(event)"><i class="fa fa-edit"></i></button>
+                        <button class="prfbtn ptr" onclick="deleter(event)"><i class="fa fa-trash"></i></button>
                         <h3>Breakfast and Lunch</h3>
                         <h3>Casual American</h3>
                         <h4>827 Church St, Evanston, IL 60202</h4>
@@ -71,34 +75,40 @@
             <div class ="category" id = "Nightlife">
                 <h1>Nightlife</h1>
                 <div class = "cat-content">
-                    <div class = "postcard bar">
+                    <div class = "postcard bar zmi">
                         <div class = "postimg">
                             <img src="images/La-Mach.jpg" alt="La Mach Picture">
                         </div>
                         <h2>La Mach</h2>
+                        <button class="prfbtn ptr" onclick="editPost(event)"><i class="fa fa-edit"></i></button>
+                        <button class="prfbtn ptr" onclick="deleter(event)"><i class="fa fa-trash"></i></button>
                         <h3>Casual bar</h3>
                         <h4>1620 Orrington Ave, Evanston, IL 60201</h4>
                     </div>
-                    <div class = "postcard bar">
+                    <div class = "postcard bar zmi">
                         <div class = "postimg">
                             <img src="images/Kincades.jpg" alt="Kincade's Picture">
                         </div>
                         <h2>Kincade's Bar and Grill</h2>
+                        <button class="prfbtn ptr" onclick="editPost(event)"><i class="fa fa-edit"></i></button>
+                        <button class="prfbtn ptr" onclick="deleter(event)"><i class="fa fa-trash"></i></button>
                         <h3>Upscale Sports Bar</h3>
                         <h4>950 W Armitage Ave, Chicago, IL 60614</h4>
                     </div>
-                    <div class = "postcard bar">
+                    <div class = "postcard bar zmi">
                         <div class = "postimg">
                             <img src="images/Old-Crow.jpg" alt="Old Crow Picture">
                         </div>
                         <h2>Old Crow</h2>
+                        <button class="prfbtn ptr" onclick="editPost(event)"><i class="fa fa-edit"></i></button>
+                        <button class="prfbtn ptr" onclick="deleter(event)"><i class="fa fa-trash"></i></button>
                         <h3>Country Bar</h3>
                         <h4>3506 N Clark St, Chicago, IL 60657</h4>
                     </div>
                 </div>
             </div>
         </div>
-        <button class = "page-follow" onclick=newPost()>New Post</button>
+        <button class = "page-follow ptr" onclick=newPost()>New Post</button>
         <div class="form-container hide" id="form">
             <button id = "close" class = "close" onclick = closeForm()><i class = "fa fa-times"></i></button>
             <h1>Create Post</h1>
@@ -111,34 +121,94 @@
                    <input type="text" name="" id="" placeholder="Title"> 
                 </div>
                 <div>
-                    <input type="text" name="" id="" placeholder="Photo URL"> 
+                    <input type="file" name="" id="" placeholder="Upload Photo..." onchange="loadFile()"></input>OR<input type="text" name="" id="upl" placeholder="Photo URL">
                 </div>
                 <br>
                 <div>
                    <textarea id="amessage" name="message" cols="65" rows="10" placeholder="What's on your mind?" onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Whats on your mind?'"></textarea>  
+                    onblur="this.placeholder = 'Description'"></textarea>  
                 </div>
             </form>
-            <button type="submit" onclick=submitForm()>Post</button>
+            <button type="submit" class="ptr" onclick=submitForm()>Post</button>
         </div>
+        <div id = "dummy"></div>
     </body>
     <script>
+        var activeEdit = false;
+        var editing = document.querySelectorAll("body");
+        
         function closeForm() {
             var postmaker = document.getElementById("form");
             postmaker.classList.add("hide");
+            if (activeEdit && editing.classList.contains("hide")){
+                editing.classList.remove("hide");
+                activeEdit = false;
+            }
+
+            var formp = document.getElementById("formp");
+            formp.reset();
         }
         
         function newPost() {
-            var postmaker = document.getElementById("form")
-            postmaker.classList.remove("hide")
+            var postmaker = document.getElementById("form");
+            postmaker.classList.remove("hide");
+        }
+
+        function deleter(ev) {
+            ev.currentTarget.parentNode.classList.add("hide");
+
+            for(elem of document.querySelectorAll(".category")) {
+                allHidden = true;
+                for (subelem of elem.querySelectorAll(".postcard")){
+                    if(!subelem.classList.contains("hide")){
+                        allHidden = false;
+                    }
+                }
+                if(allHidden) {
+                    elem.classList.add("hide");
+                }
+            }
+        }
+
+        function editPost(ev) {
+            origpost = ev.currentTarget.parentNode;
+            editing = origpost;
+            origpost.classList.add("hide");
+            activeEdit = true;
+            var postmaker = document.getElementById("form");
+            postmaker.classList.remove("hide");
+
+            var category = origpost.parentNode.parentNode.querySelector("h1").innerHTML;
+            var location = origpost.querySelector("h2").innerHTML;
+            var photourl = origpost.querySelector("img").src;
+            var description = origpost.querySelector("h4").innerHTML.replace("<br>","\n");
+
+
+            var data = document.getElementById("formp");
+            data.elements[0].value = category;
+            data.elements[1].value = location;
+            data.elements[2].value = photourl;
+            data.elements[3].value = description;
+        }
+
+        function loadFile() {
+            var data = document.getElementById("formp");
+            if(data.elements[2].files) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    data.elements[3].value = e.target.result;
+                }
+                reader.readAsDataURL(data.elements[2].files[0]);
+            }
         }
         
         function submitForm() {
             var data = document.getElementById("formp");
             var category = data.elements[0].value;
             var location = data.elements[1].value;
-            var photourl = data.elements[2].value;
-            var description = data.elements[3].value;
+            var photourl = data.elements[3].value;
+            var description = data.elements[4].value;
 
             if(photourl === ""){
                 photourl = "images/GoLocal-logo.jpeg";
@@ -152,10 +222,13 @@
             var categories = document.getElementsByClassName("category");
 
             for(item of categories) {
-                if(item.id === category) {
+                if(item.id.toLowerCase() === category.toLowerCase()) {
                     newCategory = false;
                 }
             }
+
+            activeEdit = false;
+            description = description.replace("\n","<br>");
 
             if(newCategory){
                 var template = `
@@ -167,6 +240,8 @@
                                 <img src="${photourl}" alt="${location} Picture">
                             </div>
                             <h2>${location}</h2>
+                            <button class="prfbtn" onclick="editPost(event)"><i class="fa fa-edit"></i></button>
+                            <button class="prfbtn" onclick="deleter(event)"><i class="fa fa-trash"></i></button>
                             <h4>${description}</h4>
                         </div>
                     </div>
@@ -181,13 +256,29 @@
                                 <img src="${photourl}" alt="${location} Picture">
                             </div>
                             <h2>${location}</h2>
+                            <button class="prfbtn" onclick="editPost(event)"><i class="fa fa-edit"></i></button>
+                            <button class="prfbtn" onclick="deleter(event)"><i class="fa fa-trash"></i></button>
                             <h4>${description}</h4>
                         </div>
                     `;
                 document.querySelector("#" + category + "> .cat-content").innerHTML += template;
             }
 
-            document.getElementById("form").classList.add("hide")
+            document.getElementById("form").classList.add("hide");
+
+            for(elem of document.querySelectorAll(".category")) {
+                allHidden = true;
+                for (subelem of elem.querySelectorAll(".postcard")){
+                    if(!subelem.classList.contains("hide")){
+                        allHidden = false;
+                    }
+                }
+                if(allHidden) {
+                    elem.classList.add("hide");
+                }
+            }
+            data.reset();
         }
     </script>
+    <script src="js/modal.js"></script>
 </html>

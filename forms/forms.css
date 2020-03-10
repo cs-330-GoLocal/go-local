@@ -13,7 +13,6 @@
 }
 
 form{
-    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -30,13 +29,11 @@ textarea[name=message], input[type=text]{
     border-left-style: none;
     border-top-style: none;
     border-right-style: none;
-    font-family: 'Roboto', sans-serif;
 }
 textarea[name=message]{
     padding: 12px 20px;
     width: 90%;
     resize: vertical;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
 
