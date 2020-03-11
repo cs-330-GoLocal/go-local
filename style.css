@@ -266,6 +266,7 @@ nav .prfbtn:hover {
 }
 
 .postcard {
+    position: relative;
     background-color:#011526;
     max-width:400px;
     max-height:400px;
@@ -461,7 +462,7 @@ nav .prfbtn:hover {
     height: 100vh;
     width: 200px;
     top: 40px;
-    right: -200px;
+    right: -235px;
     background-color: rgba(173, 232, 255, 0.8);
 }
 
@@ -475,7 +476,7 @@ nav .prfbtn:hover {
         transform: translate(0px, 0px);
     }
     to{
-        transform: translate(-200px, 0px);
+        transform: translate(-235px, 0px);
     }
 }
 .gold{
@@ -601,6 +602,10 @@ nav .prfbtn:hover {
     font-size: 30px;
     top: 45%;
     transform: translateY(-50%);
+    transform: translateX(-30px);
+    background-color: rgb(52, 152, 219);
+    border-radius: 50%;
+    padding: 5px 8px 5px 8px;
 }
 
 #Ana{
@@ -625,3 +630,21 @@ nav .prfbtn:hover {
     border-radius: 25px;
     padding: 10px 30px;
 }
+
+#myList li img{
+    width: 180px;
+}
+
+#myList a {
+    text-decoration:none;
+}
+
+#myList li{
+    list-style: none;
+    text-align: center;
+}
+
+ul{
+    padding: 10px;
+}
+

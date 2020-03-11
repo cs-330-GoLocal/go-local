@@ -145,6 +145,30 @@ const appendUL = (string) => {
     node.appendChild(text);
     document.getElementById("myList").appendChild(node);
 }
+const appendUL2 = (string, string2,string3) => {
+    let node = document.createElement('LI');
+    let div = document.createElement('a');
+    div.href = string3;
+    let template = string2;
+    console.log(template);
+    let text = document.createTextNode(string);
+    div.innerHTML += template;
+    div.appendChild(text);
+    node.appendChild(div);
+    document.getElementById("myList").appendChild(node);
+} 
+
+const getUL2 = (string, string2, string3) => {
+    let div = document.createElement('a');
+    let template = string2;
+    div.href = string3;
+    console.log(template);
+    let text = document.createTextNode(string);
+    div.innerHTML += template;
+    div.appendChild(text);
+    return div;
+} 
+
 const handleFavorites = (ev) => {  
     let target = ev.currentTarget;
     console.log(target);
@@ -152,12 +176,16 @@ const handleFavorites = (ev) => {
         target.classList.remove("gold");
         let parent = ev.currentTarget.parentElement.parentElement;
         console.log(parent);
+        let catig = "#" + parent.parentElement.parentElement.id;
         let h2 = parent.getElementsByTagName('h2'); 
         let innertext = h2[0].innerHTML;
         let liElements = document.getElementById("myList").getElementsByTagName("LI");
-        console.log(liElements);
+        let cousin = ev.currentTarget.parentElement;
+        let img = cousin.getElementsByTagName('img')[0].outerHTML;
+        let divElement = getUL2(innertext, img, catig).outerHTML;
         for(elem of liElements){
-            if(elem.innerHTML == innertext){
+            if(elem.innerHTML == divElement){ //have to change inner text into a template
+                console.log(elem.innerHTML); 
                 elem.parentNode.removeChild(elem);
                 break;
             }
@@ -166,11 +194,15 @@ const handleFavorites = (ev) => {
     else{
         target.classList.add("gold");
         let parent = ev.currentTarget.parentElement.parentElement;
+        let catig = "#" + parent.parentElement.parentElement.id;
         console.log(parent);
         let h2 = parent.getElementsByTagName('h2'); 
         let innertext = h2[0].innerHTML;
         console.log(innertext);  //returns the h2 tag inside the cards 
-        appendUL(innertext);  
+        let cousin = ev.currentTarget.parentElement;
+        let img = cousin.getElementsByTagName('img')[0].outerHTML;
+        console.log(img);
+        appendUL2(innertext, img, catig);  
     }
     
 
@@ -178,7 +210,7 @@ const handleFavorites = (ev) => {
 
 pressedFavorites(favoriteButtons);
 
-const rightangle = document.querySelector('.fas.fa-angle-right');
+const rightangle = document.querySelector('.fas.fa-angle-double-right');
 rightangle.onclick = function(){
     if (sidebar.classList.contains("open"))
     {
