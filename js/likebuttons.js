@@ -188,4 +188,3 @@ rightangle.onclick = function(){
         sidebar.classList.add("open");
     }
 }
-
