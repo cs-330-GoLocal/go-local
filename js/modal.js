@@ -175,3 +175,36 @@ for(card of document.querySelectorAll(".postcard")) {
         makeModal(texts,images,e,c,d);
     });
 }
+
+function cardMe() {
+    for(card of document.querySelectorAll(".postcard")) {
+        console.log("hello");
+        card.addEventListener("click",function(ev) {
+            a = ev.currentTarget.querySelectorAll("h2,h3,h4");
+            b = ev.currentTarget.querySelectorAll("img");
+            c = parseInt(ev.currentTarget.getAttribute("likes"));
+            if(isNaN(c)){
+                c = 4;
+            }
+            d = parseInt(ev.currentTarget.getAttribute("dls"));
+            if(isNaN(d)){
+                d = 1;
+            }
+    
+            e = Math.ceil((c/(c+d))*100);
+    
+            texts = ``
+            images = ``
+            for(text of a) {
+                texts+=text.outerHTML;
+            }
+            for(image of b) {
+                images += image.outerHTML;
+            }
+            if(ev.target.classList.contains("fa") || ev.target.classList.contains("favbtn")) {
+                return;
+            }
+            makeModal(texts,images,e,c,d);
+        });
+    }
+}

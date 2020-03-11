@@ -571,7 +571,7 @@ nav .prfbtn:hover {
 }
 
 .modal2{
-    background-color:darkgoldenrod;
+    background-color:rgb(255, 79, 79);
     position:fixed;
     z-index:4;
     top:44px;
@@ -596,7 +596,7 @@ nav .prfbtn:hover {
 }
 
 .modal2:hover{
-    background-color:goldenrod;
+    background-color:rgb(255, 144, 41);
 }
 
 .modal2.gold {

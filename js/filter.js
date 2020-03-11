@@ -155,8 +155,8 @@ function createPosts(category,photourl,location,description) {
             <h1>${category}</h1>
             <div class = "cat-content">
                 <div class = "postcard">
-                    <button class="prfbtn favbtn ptr" style="z-index:3;"><i class = "fa fa-star"></i></button>
                     <div class = "postimg">
+                        <button class="prfbtn favbtn ptr" style="z-index:3;" onclick="handleFavorites(event)"><i class = "fa fa-star"></i></button>
                         <img src="${photourl}" alt="${location} Picture">
                     </div>
                     <h2>${location}</h2>
@@ -170,8 +170,8 @@ function createPosts(category,photourl,location,description) {
     else {
         var template = `
                 <div class = "postcard zmi">
-                    <button class="favbtn prfbtn ptr" style="z-index:3;"><i class = "fa fa-star"></i></button>
                     <div class = "postimg">
+                        <button class="favbtn prfbtn ptr" style="z-index:3;" onclick="handleFavorites(event)"><i class = "fa fa-star"></i></button>
                         <img src="${photourl}" alt="${location} Picture">
                     </div>
                     <h2>${location}</h2>
@@ -204,7 +204,7 @@ function filter() {
     for(filterx of listOfFilters){
       for(card of cardrs) {
         if(card.categories.includes(filterx)) {
-          description = card.info.join("\n");
+          description = card.info.join("<br>");
           createPosts(filterx,card["images"][0],card["name"],description);
         }
       }
@@ -333,7 +333,7 @@ function autocomplete(inp, arr) {
       }
   });
 
-  
+
   function addActive(x) {
     /*a function to classify an item as "active":*/
     if (!x) return false;
