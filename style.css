@@ -654,3 +654,7 @@ ul{
     padding: 10px;
 }
 
+#myList {
+    max-height:100%;
+    overflow-Y:auto;
+}
