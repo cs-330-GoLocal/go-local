@@ -28,14 +28,21 @@ As a result of this feedback, we made several significant design decisions in ad
 
 <h4>High-Fidelity Prototyping (P5, P6, & P7)</h4>
 
-###Task 1: Viewable profiles with favorite restaurants, activities, etc. (insert screenshot)<br>
-###Task 2: Location pages with selected events, profiles, restaurants, night life, etc. with filter functionality and more expanded information for each item (insert screenshot)<br>
-###Task 3: Like/dislike feature for specific items on a location page (insert screenshot)<br>
-###Task 4: Messaging platform to allow travelers to ask locals questions about the area<br>
-###Task 5: “Favorite” functionality to store items the user wants to save (insert screenshot)<br>
+Task 1: Viewable profiles with ability to post, edit, and delete favorite restaurants, activities, etc.<br>
+![screenshot](/images/screenshots/profile.png "screenshot")
+<br>
 
-![IMAGE](/images/login-image.jpg "img title")
+Task 2: Location pages with selected events, profiles, restaurants, night life, etc. with filter functionality and more expanded information for each item<br>
+![screenshot](/images/screenshots/main-page.png "screenshot")
 
+Task 3: Like/dislike feature for specific items on a location page<br>
+![screenshot](/images/screenshots/like.png "screenshot")
+
+Task 4: Messaging platform to allow travelers to ask locals questions about the area<br>
+![screenshot](/images/screenshots/message.png "screenshot")
+
+Task 5: “Favorite” functionality to store items the user wants to save<br>
+![screenshot](/images/screenshots/favorites.png "screenshot")
 
 Component 1: User Profiles: We implemented user profiles where users can login or sign up, edit their own profile, ask questions on other users’ profiles, and display and view information about people’s favorite things in an area.<br>
 Component 2: Social Interaction: We implemented the ability to like or dislike, comment on, or ask questions about individual items in an area on a location page.<br>
