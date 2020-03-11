@@ -15,7 +15,7 @@ nav {
     background-color:#010b40;
     color:white;
     display:flex;
-    flex-direction:row;
+    flex-direction: row;
     z-index:5;
     vertical-align:center;
     align-items:stretch;
@@ -29,7 +29,6 @@ nav {
     font-size:30px;
     line-height:40px;
     flex: 1 1 auto;
-
 }
 
 .search {
@@ -622,8 +621,8 @@ nav .prfbtn:hover {
 
 .follow{
     position: absolute;
-    bottom: 20px;
-    left: 400px;
+    bottom: 30%;
+    right: 20px;
     height: 50px;
     font-size: 18pt;
     color: white;
