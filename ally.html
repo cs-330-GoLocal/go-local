@@ -116,5 +116,18 @@
         </div>
         <script type="text/javascript" src="js/scripts.js"></script>
         <script type="text/javascript" src="js/modal.js"></script>
+        <script>
+            let followButton = document.querySelector(".follow");
+            console.log(followButton);
+            followButton.onclick = function(){
+                if (followButton.innerHTML == "Follow!")
+                    {
+                        followButton.innerHTML = "Following";
+                    }
+                else{
+                        followButton.innerHTML = "Follow!";
+                    }
+            }
+        </script>
     </body>
 </html>
